@@ -17,6 +17,8 @@
 
 html { scroll-behavior: smooth; }
 
+a, a:visited { color: inherit; text-decoration: none; }
+
 body {
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
@@ -71,6 +73,7 @@ nav {
 }
 
 nav::after {
+  z-index: 1;
   content: "";
   position: absolute;
   left: 0;
@@ -169,6 +172,7 @@ nav.scrolled {
 
 /* Dropdowns */
 .dropdown {
+  z-index: 5;
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
@@ -255,17 +259,14 @@ nav.scrolled {
 
 .hero-bg {
   position: absolute;
-  inset: 0;
+  inset: -10% 0 0 0;
+  height: 120%;
   background-image: url('images/hero-bg.jpg');
   background-size: cover;
   background-position: center 30%;
-  transform: scale(1.05);
-  animation: heroZoom 12s ease-out forwards;
-}
-
-@keyframes heroZoom {
-  from { transform: scale(1.05); }
-  to { transform: scale(1.0); }
+  transform: scale(1.08) translateY(0px);
+  transition: transform 0.05s linear;
+  will-change: transform;
 }
 
 .hero-overlay {
@@ -302,15 +303,13 @@ nav.scrolled {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(232,82,26,0.15);
-  border: 1px solid rgba(232,82,26,0.4);
-  border-radius: 100px;
-  padding: 6px 16px;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #FF8A5C;
+  color: var(--sky);
+  border-left: 3px solid var(--orange);
+  padding-left: 14px;
   margin-bottom: 24px;
   opacity: 0;
   animation: fadeUp 0.7s 0.3s ease forwards;
@@ -467,9 +466,23 @@ nav.scrolled {
 .advisor-banner::after {
   content: "";
   position: absolute;
-  top: 0; right: 0; bottom: 0;
-  width: 240px;
-  background: linear-gradient(100deg, transparent 0%, rgba(169,204,234,0.12) 100%);
+  top: -50px; right: -50px;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 220px 200px 0;
+  border-color: transparent var(--sky) transparent transparent;
+  opacity: 0.25;
+  pointer-events: none;
+}
+.advisor-banner::before {
+  content: "";
+  position: absolute;
+  bottom: -60px; left: 10%;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 0 170px 200px;
+  border-color: transparent transparent var(--orange) transparent;
+  opacity: 0.20;
   pointer-events: none;
 }
 
@@ -615,7 +628,25 @@ section {
 .view-all:hover { gap: 14px; }
 
 /* ===================== PRODUCTS ===================== */
-.products-section { background: var(--off-white); }
+.products-section { background: var(--off-white); position: relative; overflow: hidden; }
+
+/* Gulf corner design 2, large, top-right of products section (revertable: delete this rule + remove .products-corner div from markup + delete images/gulf-corner2.png) */
+.products-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 720px;
+  height: 720px;
+  background-image: url('../images/gulf-corner2.png');
+  background-size: cover;
+  background-position: top right;
+  pointer-events: none;
+  z-index: 0;
+}
+.products-section .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .products-corner { width: 380px; height: 380px; }
+}
 
 .product-grid {
   display: grid;
@@ -714,12 +745,32 @@ section {
   background: var(--white);
   padding: 0;
   overflow: hidden;
+  position: relative;
+}
+
+/* Gulf corner design 3, bottom-right of "За нас" section, rotated 90° clockwise (revertable: delete this rule + remove .about-corner div from markup + delete images/gulf-corner3.png) */
+.about-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background-image: url('../images/gulf-corner3.png');
+  background-size: cover;
+  background-position: center;
+  transform: rotate(90deg);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 900px) {
+  .about-corner { width: 220px; height: 220px; }
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 580px;
+  grid-template-columns: 0.85fr 1.15fr;
+  min-height: 480px;
 }
 
 .about-image {
@@ -740,9 +791,36 @@ section {
   background: linear-gradient(to right, transparent 60%, rgba(255,255,255,0.1));
 }
 
+.about-content::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 200px 200px 0;
+  border-color: transparent var(--sky) transparent transparent;
+  opacity: 0.28;
+}
+.about-content::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -30px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 150px 220px;
+  border-color: transparent transparent var(--orange) transparent;
+  opacity: 0.22;
+}
+
 .about-content {
-  background: var(--navy);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 70%, #2f4a9e 100%);
   padding: 80px 64px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -780,9 +858,32 @@ section {
 
 /* ===================== MOTORSPORT ===================== */
 .motorsport-section {
-  background: var(--navy-dark);
+  background: linear-gradient(120deg, var(--navy-dark) 0%, #5a3318 55%, var(--orange) 130%);
   position: relative;
   overflow: hidden;
+}
+
+.motorsport-section::before {
+  content: "";
+  position: absolute;
+  top: -50px; left: 30%;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 180px 160px 0;
+  border-color: transparent var(--orange) transparent transparent;
+  opacity: 0.18;
+  z-index: 0;
+}
+.motorsport-section::after {
+  content: "";
+  position: absolute;
+  bottom: -60px; right: -40px;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 0 220px 260px;
+  border-color: transparent transparent var(--sky) transparent;
+  opacity: 0.22;
+  z-index: 0;
 }
 
 .motorsport-bg {
@@ -827,7 +928,7 @@ section {
   padding: 10px 18px;
   font-size: 13px;
   font-weight: 600;
-  color: rgba(255,255,255,0.8);
+  color: var(--white);
   transition: all var(--transition);
   text-decoration: none;
   cursor: pointer;
@@ -882,7 +983,26 @@ section {
 .ms-img-placeholder-icon { font-size: 28px; }
 
 /* ===================== NEWS ===================== */
-.news-section { background: var(--off-white); }
+.news-section { background: var(--off-white); position: relative; overflow: hidden; }
+
+/* Gulf corner design 4, bottom-right of news section, mirrored vertically (revertable: delete this rule + remove .news-corner-bottom div from markup + delete images/gulf-corner4.png) */
+.news-corner-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 720px;
+  height: 720px;
+  background-image: url('../images/gulf-corner4.png');
+  background-size: cover;
+  background-position: top right;
+  transform: scaleY(-1);
+  pointer-events: none;
+  z-index: 0;
+}
+.news-section .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .news-corner-bottom { width: 380px; height: 380px; }
+}
 
 .news-grid {
   display: grid;
@@ -1321,9 +1441,31 @@ footer {
 /* ===================== INNER PAGE HERO ===================== */
 .page-hero {
   position: relative;
-  background: linear-gradient(120deg, var(--navy-dark) 0%, var(--navy) 100%);
+  background: linear-gradient(115deg, var(--navy-dark) 0%, var(--navy) 55%, #3a55a8 100%);
   padding: 64px 0 56px;
   overflow: hidden;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: -40px; right: -60px;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 260px 220px 0;
+  border-color: transparent var(--orange) transparent transparent;
+  opacity: 0.22;
+}
+.page-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -70px; left: -50px;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 0 200px 240px;
+  border-color: transparent transparent var(--sky) transparent;
+  opacity: 0.26;
 }
 .page-hero::after {
   content: '';
@@ -1358,15 +1500,13 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(232,82,26,0.15);
-  border: 1px solid rgba(232,82,26,0.4);
-  border-radius: 100px;
-  padding: 6px 16px;
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #FF8A5C;
+  color: var(--sky);
+  border-left: 3px solid var(--orange);
+  padding-left: 14px;
   margin-bottom: 18px;
 }
 .page-hero-title {
@@ -1755,10 +1895,33 @@ footer {
 }
 
 .contact-info-card {
-  background: var(--navy);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   border-radius: 16px;
   padding: 40px;
+  position: relative;
+  overflow: hidden;
   color: var(--white);
+}
+
+.contact-info-card::before {
+  content: "";
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 160px 140px 0;
+  border-color: transparent var(--sky) transparent transparent;
+  opacity: 0.22;
+}
+.contact-info-card::after {
+  content: "";
+  position: absolute;
+  bottom: -40px; left: -30px;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 0 120px 160px;
+  border-color: transparent transparent var(--orange) transparent;
+  opacity: 0.18;
 }
 .contact-info-card .section-label { color: rgba(255,255,255,0.5); }
 .contact-info-card .section-label::before { background: rgba(255,255,255,0.3); }
@@ -1989,3 +2152,77 @@ footer {
   color: var(--navy);
   font-weight: 600;
 }
+
+/* ===================== PRODUCT CARD GRID (category listings) ===================== */
+.product-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1100px) {
+  .product-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .product-card-grid { grid-template-columns: 1fr; }
+}
+
+/* ===================== PRODUCT BENEFIT GRID ===================== */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.benefit-card {
+  background: var(--white);
+  border-left: 4px solid var(--orange);
+  border-radius: 10px;
+  padding: 26px 28px;
+  box-shadow: 0 6px 24px rgba(27,45,107,0.07);
+}
+.benefit-card:nth-child(4n+2) { border-left-color: var(--navy); }
+.benefit-card:nth-child(4n+3) { border-left-color: var(--sky); }
+.benefit-card:nth-child(4n+4) { border-left-color: var(--orange); }
+.benefit-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.benefit-card-text { font-size: 14px; color: var(--navy-light); line-height: 1.65; }
+
+@media (max-width: 700px) {
+  .benefit-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ===================== HOMEPAGE PRODUCT CARDS — SHARD CORNER ACCENT (revertable: delete this block + remove "shard-card"/"shard-corner" markup) ===================== */
+.product-card.shard-card .product-card-img {
+  position: relative;
+}
+.shard-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 92px;
+  height: 92px;
+  background-size: 320% 320%;
+  background-position: top right;
+  background-repeat: no-repeat;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+  opacity: 0.92;
+  box-shadow: -2px 2px 10px rgba(17,29,71,0.25);
+}
+.product-card.shard-card .product-card-tag {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  padding: 3px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.08em;
+}
+.product-card.shard-card:nth-child(4n+2) .product-card-tag { background: var(--navy); }
+.product-card.shard-card:nth-child(4n+3) .product-card-tag { background: var(--sky); color: var(--navy); }
+.product-card.shard-card:nth-child(4n+4) .product-card-tag { background: var(--orange); }

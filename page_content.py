@@ -19,7 +19,7 @@ PAGES['index.html'] = (
 """
 <!-- HERO -->
 <section class="hero" style="padding:0;">
-  <div class="hero-bg" style="background-image:url('images/hero-bg.jpg');"></div>
+  <div class="hero-bg" style="background-image:url('images/mclaren-artura-road.jpg');"></div>
   <div class="hero-overlay"></div>
   <div class="hero-overlay-bottom"></div>
   <div class="hero-content">
@@ -72,6 +72,7 @@ PAGES['index.html'] = (
 
 <!-- PRODUCTS -->
 <section class="products-section">
+  <div class="products-corner"></div>
   <div class="section-inner">
     <div class="section-header reveal">
       <div>
@@ -83,9 +84,10 @@ PAGES['index.html'] = (
     </div>
 
     <div class="product-grid">
-      <a href="products-automotive.html#cars" class="product-card reveal reveal-delay-1">
+      <a href="products-automotive.html#cars" class="product-card shard-card reveal reveal-delay-1">
         <div class="product-card-img">
           <img src="images/product-automotive.jpg" alt="Автомобилни масла">
+          <div class="shard-corner" style="background-image:url('images/gulf-shard-1.jpg');"></div>
         </div>
         <div class="product-card-body">
           <div class="product-card-tag">Автомобилни</div>
@@ -95,9 +97,10 @@ PAGES['index.html'] = (
         </div>
       </a>
 
-      <a href="products-automotive.html#commercial" class="product-card reveal reveal-delay-2">
+      <a href="products-automotive.html#commercial" class="product-card shard-card reveal reveal-delay-2">
         <div class="product-card-img">
-          <img src="images/williams-helmets.jpg" alt="Търговски превозни средства">
+          <img src="images/trackhouse-race-3.jpg" alt="Търговски превозни средства">
+          <div class="shard-corner" style="background-image:url('images/gulf-shard-2.jpg');"></div>
         </div>
         <div class="product-card-body">
           <div class="product-card-tag">Автомобилни</div>
@@ -107,9 +110,10 @@ PAGES['index.html'] = (
         </div>
       </a>
 
-      <a href="products-agriculture.html" class="product-card reveal reveal-delay-3">
+      <a href="products-agriculture.html" class="product-card shard-card reveal reveal-delay-3">
         <div class="product-card-img">
           <img src="images/agri-hero.jpg" alt="Земеделска техника">
+          <div class="shard-corner" style="background-image:url('images/gulf-shard-3.jpg');"></div>
         </div>
         <div class="product-card-body">
           <div class="product-card-tag">Земеделие</div>
@@ -119,9 +123,10 @@ PAGES['index.html'] = (
         </div>
       </a>
 
-      <a href="products-industrial-marine.html#marine" class="product-card reveal reveal-delay-4">
+      <a href="products-industrial-marine.html#marine" class="product-card shard-card reveal reveal-delay-4">
         <div class="product-card-img">
-          <img src="images/product-marine.jpg" alt="Морски смазочни материали">
+          <img src="images/product-marine.jpg" alt="Морски смазочни материали" style="object-position: 15% 35%;">
+          <div class="shard-corner" style="background-image:url('images/gulf-shard-4.jpg');"></div>
         </div>
         <div class="product-card-body">
           <div class="product-card-tag">Море</div>
@@ -142,6 +147,8 @@ PAGES['index.html'] = (
       <div class="about-image-overlay"></div>
     </div>
     <div class="about-content">
+      <div class="about-corner"></div>
+      <div style="position:relative; z-index:1;">
       <div class="section-label">За нас</div>
       <h2 class="section-title">Над 120 години<br><span>иновации</span></h2>
       <p class="section-body">
@@ -166,6 +173,7 @@ PAGES['index.html'] = (
       </div>
       <div style="margin-top:36px;">
         <a href="about.html#history" class="btn-primary">Нашата история →</a>
+      </div>
       </div>
     </div>
   </div>
@@ -195,13 +203,13 @@ PAGES['index.html'] = (
 
       <div class="motorsport-image-stack reveal reveal-delay-2">
         <div class="ms-img ms-img-tall">
-          <img src="images/motorsport-stack-1.jpg" alt="Gulf Racing"><span class="partner-caption">McLaren Automotive</span>
+          <img src="images/mclaren-artura-front.jpg" alt="McLaren Artura"><span class="partner-caption">McLaren Automotive</span>
         </div>
         <div class="ms-img">
-          <img src="images/motorsport-stack-2.jpg" alt="Gulf Motorsport"><span class="partner-caption">TAG Heuer × Gulf</span>
+          <img src="images/tagheuer-detail.jpg" alt="TAG Heuer Monaco"><span class="partner-caption">TAG Heuer × Gulf</span>
         </div>
         <div class="ms-img">
-          <img src="images/everrati-1.jpg" alt="Everrati електрическо Porsche">
+          <img src="images/everrati-porsche.jpg" alt="Everrati електрическо Porsche">
         </div>
       </div>
     </div>
@@ -222,7 +230,7 @@ PAGES['index.html'] = (
       </div>
     </a>
     <a href="products-industrial-marine.html#marine" class="sector-panel">
-      <div class="sector-bg" style="background-image: url('images/sector-marine.jpg'); background-position: center 40%;"></div>
+      <div class="sector-bg" style="background-image: url('images/sector-marine.jpg'); background-position: center 95%;"></div>
       <div class="sector-overlay"></div>
       <div class="sector-content">
         <div class="sector-tag">Море</div>
@@ -236,6 +244,7 @@ PAGES['index.html'] = (
 
 <!-- NEWS -->
 <section class="news-section">
+  <div class="news-corner-bottom"></div>
   <div class="section-inner">
     <div class="section-header reveal">
       <div>
@@ -285,16 +294,6 @@ PAGES['index.html'] = (
   </div>
 </section>
 
-<!-- DEALER CTA -->
-<div class="cta-section">
-  <div class="cta-inner">
-    <div>
-      <div class="cta-title">Намерете Gulf дилър<br>близо до вас</div>
-      <div class="cta-sub">Мрежа от сертифицирани дистрибутори в цяла България</div>
-    </div>
-    <a href="dealer-locator.html" class="btn-white">Намери дилър →</a>
-  </div>
-</div>
 """)
 
 # ============================================================
@@ -351,7 +350,7 @@ PAGES['about.html'] = (
         <h2 class="section-title">Над век<br><span>наследство</span></h2>
         <p class="section-body">От първите кладенци до партньорствата с леджендарни отбори във Формула 1 — пътят на Gulf е история на постоянство и страст.</p>
         <div class="history-photo reveal reveal-delay-2">
-          <img src="images/partner-livery.jpg" alt="Историческа Gulf ливрея"><span class="partner-caption">ROFGO Collection</span>
+          <img src="images/trackhouse-podium-duo.jpg" alt="Trackhouse MotoGP подиум"><span class="partner-caption">ROFGO Collection</span>
         </div>
       </div>
       <div class="timeline reveal reveal-delay-1">
@@ -473,27 +472,11 @@ PAGES['about.html'] = (
           <a href="contact.html" class="btn-primary">Свържете се с нас →</a>
         </div>
       </div>
-      <div class="value-grid" style="grid-template-columns:1fr 1fr;margin-top:0;">
-        <div class="value-card">
-          <div class="value-card-icon">""" + icon("Re") + """</div>
-          <div class="value-card-title">Рециклиране</div>
-          <div class="value-card-text">Насърчаваме правилното събиране и обработка на отработени масла.</div>
-        </div>
-        <div class="value-card">
-          <div class="value-card-icon">""" + icon("Ec") + """</div>
-          <div class="value-card-title">По-чисти формули</div>
-          <div class="value-card-text">Разработваме продукти с фокус върху ефективност и намалени емисии.</div>
-        </div>
-        <div class="value-card">
-          <div class="value-card-icon">""" + icon("Pk") + """</div>
-          <div class="value-card-title">Опаковки</div>
-          <div class="value-card-text">Работим към по-устойчиви решения за опаковане и логистика.</div>
-        </div>
-        <div class="value-card">
-          <div class="value-card-icon">""" + icon("Cm") + """</div>
-          <div class="value-card-title">Общности</div>
-          <div class="value-card-text">Подкрепяме инициативи на местните общности, в които оперираме.</div>
-        </div>
+      <div class="prose">
+        <p><strong>Рециклиране.</strong> Насърчаваме правилното събиране и обработка на отработени масла чрез мрежа от партньори и сертифицирани пунктове.</p>
+        <p><strong>По-чисти формули.</strong> Разработваме продукти с фокус върху ефективност, по-дълъг живот и намалени емисии — за по-малък отпечатък върху околната среда.</p>
+        <p><strong>Опаковки.</strong> Работим към по-устойчиви решения за опаковане, транспорт и логистика в цялата верига на доставки.</p>
+        <p><strong>Общности.</strong> Подкрепяме инициативи на местните общности, в които оперираме — от образователни програми до партньорства за опазване на околната среда.</p>
       </div>
     </div>
   </div>
@@ -529,9 +512,9 @@ PAGES['motorsport.html'] = (
       </div>
       <div>
         <div class="motorsport-image-stack" style="height:380px;">
-          <div class="ms-img ms-img-tall"><img src="images/motorsport-stack-1.jpg" alt="Gulf Racing"><span class="partner-caption">McLaren Automotive</span></div>
-          <div class="ms-img"><img src="images/motorsport-stack-2.jpg" alt="Gulf Motorsport"><span class="partner-caption">TAG Heuer × Gulf</span></div>
-          <div class="ms-img"><img src="images/williams-helmets.jpg" alt="Williams Racing каски"></div>
+          <div class="ms-img ms-img-tall"><img src="images/mclaren-artura-road.jpg" alt="McLaren Artura"><span class="partner-caption">McLaren Automotive</span></div>
+          <div class="ms-img"><img src="images/tagheuer-watch.jpg" alt="TAG Heuer x Gulf Monaco"><span class="partner-caption">TAG Heuer × Gulf</span></div>
+          <div class="ms-img"><img src="images/trackhouse-podium-duo.jpg" alt="Trackhouse MotoGP подиум"></div>
         </div>
       </div>
     </div>
@@ -625,7 +608,7 @@ PAGES['partnerships.html'] = (
 
     <div class="partner-block anchor-offset reveal" id="trackhouse">
       <div class="partner-media">
-        <img src="images/trackhouse-1.jpg" alt="Trackhouse MotoGP">
+        <img src="images/trackhouse-race-2.jpg" alt="Trackhouse MotoGP">
         <span class="partner-caption">Trackhouse Racing — MotoGP</span>
         <span class="partner-shard-sky"></span>
       </div>
@@ -644,7 +627,7 @@ PAGES['partnerships.html'] = (
 
     <div class="partner-block anchor-offset reveal" id="mclaren">
       <div class="partner-media">
-        <img src="images/motorsport-stack-1.jpg" alt="McLaren Automotive">
+        <img src="images/mclaren-artura-road.jpg" alt="McLaren Automotive">
         <span class="partner-caption">McLaren Automotive</span>
         <span class="partner-shard-sky"></span>
       </div>
@@ -662,7 +645,7 @@ PAGES['partnerships.html'] = (
 
     <div class="partner-block anchor-offset reveal" id="everrati">
       <div class="partner-media">
-        <img src="images/everrati-2.jpg" alt="Everrati">
+        <img src="images/everrati-porsche.jpg" alt="Everrati">
         <span class="partner-caption">Everrati — електрическо наследство</span>
         <span class="partner-shard-sky"></span>
       </div>
@@ -680,7 +663,7 @@ PAGES['partnerships.html'] = (
 
     <div class="partner-block anchor-offset reveal" id="rofgo">
       <div class="partner-media">
-        <img src="images/partner-livery.jpg" alt="ROFGO Collection">
+        <img src="images/everrati-2.jpg" alt="ROFGO Collection">
         <span class="partner-caption">ROFGO Collection</span>
         <span class="partner-shard-sky"></span>
       </div>
@@ -698,7 +681,7 @@ PAGES['partnerships.html'] = (
 
     <div class="partner-block anchor-offset reveal" id="tagheuer">
       <div class="partner-media">
-        <img src="images/motorsport-stack-2.jpg" alt="TAG Heuer">
+        <img src="images/tagheuer-watch.jpg" alt="TAG Heuer x Gulf Monaco">
         <span class="partner-caption">TAG Heuer × Gulf</span>
         <span class="partner-shard-sky"></span>
       </div>
@@ -790,7 +773,7 @@ PAGES['news.html'] = (
       </a>
 
       <a href="#" class="news-list-item reveal">
-        <div class="news-list-thumb"><img src="images/trackhouse-1.jpg" alt="Trackhouse MotoGP"><span class="partner-caption">Trackhouse Racing — MotoGP</span></div>
+        <div class="news-list-thumb"><img src="images/trackhouse-podium-fernandez.jpg" alt="Trackhouse MotoGP подиум"><span class="partner-caption">Trackhouse Racing — MotoGP</span></div>
         <div>
           <span class="news-card-tag">Мотоспорт</span>
           <div class="news-card-title">Trackhouse MotoGP стартира сезона с цветовете на Gulf</div>
@@ -800,7 +783,7 @@ PAGES['news.html'] = (
       </a>
 
       <a href="#" class="news-list-item reveal">
-        <div class="news-list-thumb"><img src="images/everrati-1.jpg" alt="Съветник за смазочни материали"></div>
+        <div class="news-list-thumb"><img src="images/product-pour.jpg" alt="Съветник за смазочни материали"></div>
         <div>
           <span class="news-card-tag">Продукти</span>
           <div class="news-card-title">Обновен съветник за смазочни материали вече е достъпен онлайн</div>
@@ -1114,29 +1097,34 @@ PAGES['products-automotive.html'] = (
         <p class="partner-text">Пълна гама от синтетични и полусинтетични моторни масла за леки автомобили с бензинови и дизелови двигатели — разработени да осигурят защита, чистота и плавна работа на двигателя при всякакви условия на движение.</p>
         <p class="partner-text">Линията включва продукти за съвременни турбо двигатели с директно впръскване, както и класически формули за по-стари автомобили.</p>
         <div class="partner-highlight">Над 6000 продукта в портфолиото на Gulf</div>
-        <div style="margin-top:20px;"><a href="https://europe.gulfoilltd.com/lubricantadvisor" target="_blank" class="btn-primary">Намерете продукт за вашия автомобил →</a></div>
+        <div style="margin-top:20px;display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="product-auto-passenger.html" class="btn-primary">Разгледай продукта →</a>
+          <a href="https://europe.gulfoilltd.com/lubricantadvisor" target="_blank" class="btn-white" style="border:2px solid var(--navy);color:var(--navy);background:transparent;">Намерете продукт за вашия автомобил →</a>
+        </div>
       </div>
     </div>
 
     <div class="partner-block anchor-offset reveal" id="motorcycle">
-      <div class="partner-media"><img src="images/everrati-1.jpg" alt="Мотоциклетни масла"><span class="partner-caption">Изпитани в условията на пистата</span></div>
+      <div class="partner-media"><img src="images/trackhouse-race-4.jpg" alt="Мотоциклетни масла"><span class="partner-caption">Изпитани в условията на пистата</span></div>
       <div>
         <div class="partner-tag">Мотоциклети</div>
         <h2 class="partner-title">Мотоциклетни масла</h2>
         <p class="partner-text">Специализирани формули за двутактови и четиритактови мотоциклетни двигатели — осигуряващи защита при високи обороти, плавно превключване и дълготрайна издръжливост на двигателя и съединителя.</p>
         <p class="partner-text">Технологиите от партньорството ни с Trackhouse MotoGP пряко се пренасят в продуктите от тази гама — изпитани в най-екстремните условия на пистата.</p>
         <div class="partner-highlight">Подкрепени от наследството ни в MotoGP</div>
+        <div style="margin-top:20px;"><a href="product-auto-motorcycle.html" class="btn-primary">Разгледай продукта →</a></div>
       </div>
     </div>
 
     <div class="partner-block anchor-offset reveal" id="commercial">
-      <div class="partner-media"><img src="images/williams-helmets.jpg" alt="Търговски превозни средства"><span class="partner-caption">Търговски флоти — Gulf продукти</span></div>
+      <div class="partner-media"><img src="images/mclaren-artura-detail.jpg" alt="Търговски превозни средства"><span class="partner-caption">Търговски флоти — Gulf продукти</span></div>
       <div>
         <div class="partner-tag">Търговски флоти</div>
         <h2 class="partner-title">Търговски превозни средства</h2>
         <p class="partner-text">Продукти, разработени за камиони, автобуси и тежкотоварни превозни средства — намаляващи разходите за поддръжка и удължаващи живота на двигателя при интензивна експлоатация.</p>
         <p class="partner-text">Гамата включва моторни масла, трансмисионни и хидравлични течности, отговарящи на изискванията на водещите производители на двигатели.</p>
         <div class="partner-highlight">Издържливост при тежки и продължителни натоварвания</div>
+        <div style="margin-top:20px;"><a href="product-auto-commercial.html" class="btn-primary">Разгледай продукта →</a></div>
       </div>
     </div>
 
@@ -1156,6 +1144,1204 @@ PAGES['products-automotive.html'] = (
     <a href="https://europe.gulfoilltd.com/lubricantadvisor" target="_blank" class="advisor-btn">Отвори съветника ›</a>
   </div>
 </div>
+""")
+
+# ============================================================
+# PRODUCT DETAIL — AGRI ENGINE OIL (template for individual product pages)
+# ============================================================
+PAGES['product-agri-engine-oil.html'] = (
+"Моторни масла за земеделска техника — Gulf Oil България",
+"Gulf моторни масла за земеделска техника — формулирани за защита на двигателя при високо натоварване, прах и продължителна работа.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/agri-hero.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-agriculture.html">Земеделие</a> › Моторни масла</div>
+    <div class="page-hero-eyebrow">Земеделие · Продукт</div>
+    <h1 class="page-hero-title">Моторни <span>масла</span></h1>
+    <p class="page-hero-sub">Защита на двигателя при продължителна работа с високо натоварване и в прашна среда — формулирани да удължават интервалите между смените и да намаляват износването на критични компоненти.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Изградени за<br><span>тежки условия</span></h2>
+        <div class="prose">
+          <p>Земеделската техника работи в едни от най-взискателните условия — продължителни смени, високо натоварване на двигателя, прах и резки промени в температурата. Моторните масла на Gulf са формулирани именно за тази среда, осигурявайки стабилна защита от първото до последното завъртане на двигателя през сезона.</p>
+          <p>Гамата покрива нуждите на трактори, комбайни и друга самоходна техника — независимо дали става дума за по-стари дизелови двигатели или съвременни модели с прецизни системи за контрол на емисиите.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/agri-secondary.jpg" alt="Gulf моторни масла за земеделска техника" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">15W-40</div><div class="stat-block-label">Основна спецификация</div></div>
+      <div class="stat-block"><div class="stat-block-num">API CK-4</div><div class="stat-block-label">Стандарт за дизелови двигатели</div></div>
+      <div class="stat-block"><div class="stat-block-num">500ч</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">−30°C</div><div class="stat-block-label">Студен старт</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf моторни масла</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Удължена защита на двигателя</div>
+        <div class="benefit-card-text">Стабилна маслена пленка при високи температури и натоварвания намалява износването на бутала, лагери и разпределителни механизми.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Контрол на саждите и отлаганията</div>
+        <div class="benefit-card-text">Усъвършенствани диспергиращи свойства поддържат двигателя чист дори при продължителна работа с нискокачествени горива.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-дълги интервали между смените</div>
+        <div class="benefit-card-text">По-висока устойчивост на окисление позволява по-рядка подмяна на маслото — по-малко престой и по-ниски разходи за поддръжка.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Лесен студен старт</div>
+        <div class="benefit-card-text">Подходяща вискозност при ниски температури осигурява бързо подаване на масло към критичните части на двигателя още при първото запалване.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+        <p class="section-body">Gulf моторни масла обслужват широк спектър земеделска и самоходна техника:</p>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Трактори и комбайни с дизелови двигатели от различни поколения; самоходни пръскачки и товарo-разтоварна техника; стационарни и преносими генератори и помпени агрегати, използвани в земеделски обекти.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+
+# ============================================================
+# PRODUCT DETAIL PAGES — generated set
+# ============================================================
+PAGES['product-agri-transmission.html'] = (
+"Трансмисионни течности — Gulf Oil България",
+"Gulf трансмисионни течности — Плавна работа на трансмисията и удължен живот на компонентите при тежки условия и продължително натоварване.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/agri-hero.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-agriculture.html">Земеделие</a> › Трансмисионни течности</div>
+    <div class="page-hero-eyebrow">Земеделие · Продукт</div>
+    <h1 class="page-hero-title">Трансмисионни <span>течности</span></h1>
+    <p class="page-hero-sub">Плавна работа на трансмисията и удължен живот на компонентите при тежки условия и продължително натоварване.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Прецизност при<br><span>всяко превключване</span></h2>
+        <div class="prose">
+          <p>Трансмисиите на земеделската техника понасят постоянни промени в натоварването — от транспортни преходи до прецизна работа на полето. Течностите на Gulf са създадени да поддържат стабилно налягане и плавно зацепване във всеки режим.</p>
+          <p>Формулите осигуряват защита на зъбни колела, синхронизатори и хидравлични елементи на трансмисията, намалявайки шума и износването при дългогодишна експлоатация.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/agri-secondary.jpg" alt="Трансмисионни течности" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">80W-90</div><div class="stat-block-label">Основна спецификация</div></div>
+      <div class="stat-block"><div class="stat-block-num">API GL-4</div><div class="stat-block-label">Стандарт за трансмисии</div></div>
+      <div class="stat-block"><div class="stat-block-num">1000ч</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">−25°C</div><div class="stat-block-label">Студен старт</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf трансмисионни течности</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Плавно зацепване</div>
+        <div class="benefit-card-text">Стабилна вискозност при различни температури осигурява меко и точно превключване на предавките.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита на зъбните колела</div>
+        <div class="benefit-card-text">Усъвършенствани присадки намаляват триенето и предпазват металните повърхности от микро-разрушения.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Устойчивост на пенене</div>
+        <div class="benefit-card-text">Контролирано поведение при високи обороти запазва стабилно налягане в системата.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-дълъг живот на компонентите</div>
+        <div class="benefit-card-text">Намалено износване удължава експлоатационния живот на скоростната кутия и редукторите.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Трактори с механични и полу-автоматични трансмисии; комбайни с тежко натоварени редуктори; товарo-разтоварна техника и прикачен инвентар с хидравлично задвижване.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-agri-hydraulic.html'] = (
+"Хидравлични масла — Gulf Oil България",
+"Gulf хидравлични масла — Стабилна и надеждна работа на хидравличните системи — от навесно оборудване и товарачи до прецизни земеделски машини с високо налягане.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/sector-industrial.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-agriculture.html">Земеделие</a> › Хидравлични масла</div>
+    <div class="page-hero-eyebrow">Земеделие · Продукт</div>
+    <h1 class="page-hero-title">Хидравлични <span>масла</span></h1>
+    <p class="page-hero-sub">Стабилна и надеждна работа на хидравличните системи — от навесно оборудване и товарачи до прецизни земеделски машини с високо налягане.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Сила и прецизност<br><span>под налягане</span></span></h2>
+        <div class="prose">
+          <p>Хидравличните системи на съвременната земеделска техника изискват течности, които запазват стабилни характеристики при високо налягане, променливи температури и продължителна работа без прекъсване.</p>
+          <p>Маслата на Gulf поддържат точен и предвидим отклик на хидравликата — от управлението на навесни устройства до системите за прецизно земеделие.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/marine-hero.jpg" alt="Хидравлични масла" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">ISO 46</div><div class="stat-block-label">Клас на вискозност</div></div>
+      <div class="stat-block"><div class="stat-block-num">DIN 51524</div><div class="stat-block-label">Хидравличен стандарт</div></div>
+      <div class="stat-block"><div class="stat-block-num">2000ч</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">−20°C</div><div class="stat-block-label">Студен старт</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf хидравлични масла</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Стабилно налягане</div>
+        <div class="benefit-card-text">Постоянна вискозност гарантира предвидим и точен отклик на хидравличните механизми.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита от износване</div>
+        <div class="benefit-card-text">Висококачествени присадки предпазват помпи, клапани и цилиндри от преждевременно износване.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Устойчивост на окисление</div>
+        <div class="benefit-card-text">По-дълъг експлоатационен живот на маслото дори при висока работна температура.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Съвместимост с уплътненията</div>
+        <div class="benefit-card-text">Формула, съобразена с материалите на съвременните хидравлични системи — без риск от течове.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Челни товарачи и навесни устройства; системи за управление на прикачен инвентар; хидростатични трансмисии и прецизни системи за насочване.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-agri-stou.html'] = (
+"STOU масла — Gulf Oil България",
+"Gulf STOU масла — Универсална формула, която покрива двигател, трансмисия и хидравлика в едно решение — по-малко продукти за съхранение и по-проста поддръжка на парка машини.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/marine-hero.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-agriculture.html">Земеделие</a> › STOU масла</div>
+    <div class="page-hero-eyebrow">Земеделие · Продукт</div>
+    <h1 class="page-hero-title">STOU <span>масла</span></h1>
+    <p class="page-hero-sub">Универсална формула, която покрива двигател, трансмисия и хидравлика в едно решение — по-малко продукти за съхранение и по-проста поддръжка на парка машини.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Едно масло —<br><span>пълно покритие</span></h2>
+        <div class="prose">
+          <p>STOU (Super Tractor Oil Universal) маслата на Gulf са създадени за земеделски стопанства и сервизи, които искат да опростят поддръжката си — едно масло, което отговаря на изискванията едновременно на двигател, трансмисия, хидравлика и спирачки, потопени в масло.</p>
+          <p>Това намалява риска от грешки при избора на правилния продукт, опростява логистиката на склада и намалява общите разходи за поддръжка на парка машини.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/agri-hero.jpg" alt="STOU масла" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">10W-30</div><div class="stat-block-label">Основна спецификация</div></div>
+      <div class="stat-block"><div class="stat-block-num">API GL-4</div><div class="stat-block-label">Многофункционален стандарт</div></div>
+      <div class="stat-block"><div class="stat-block-num">1×</div><div class="stat-block-label">Продукт за всички системи</div></div>
+      <div class="stat-block"><div class="stat-block-num">−25°C</div><div class="stat-block-label">Студен старт</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf STOU масла</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Опростена поддръжка</div>
+        <div class="benefit-card-text">Едно масло за двигател, трансмисия и хидравлика — по-малко грешки и по-лесно управление на склада.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Доказана съвместимост</div>
+        <div class="benefit-card-text">Подходящо за мокри спирачки и съединители без риск от приплъзване или износване.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Стабилност при смесени системи</div>
+        <div class="benefit-card-text">Запазва експлоатационните си характеристики дори при споделена циркулация между компоненти.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-ниски общи разходи</div>
+        <div class="benefit-card-text">По-малко складирани продукти и по-лесна логистика означават реални икономии за стопанството.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Универсални трактори с обща хидравлично-трансмисионна система; по-стара техника, използваща споделени резервоари; стопанства, предпочитащи опростена едно-продуктова поддръжка.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-agri-chain.html'] = (
+"Верижни масла — Gulf Oil България",
+"Gulf верижни масла — Специализирана защита срещу износване на вериги, водачи и движещи се части — устойчивост на прах, влага и резки температурни промени.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/agri-hero.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-agriculture.html">Земеделие</a> › Верижни масла</div>
+    <div class="page-hero-eyebrow">Земеделие · Продукт</div>
+    <h1 class="page-hero-title">Верижни <span>масла</span></h1>
+    <p class="page-hero-sub">Специализирана защита срещу износване на вериги, водачи и движещи се части — устойчивост на прах, влага и резки температурни промени.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Защита там,<br><span>където триенето е най-силно</span></h2>
+        <div class="prose">
+          <p>Веригите и водещите механизми на земеделската техника работят в постоянен контакт с прах, влага и абразивни частици. Верижните масла на Gulf са формулирани да издържат на тези условия, като се задържат върху повърхността и не се отмиват лесно.</p>
+          <p>Резултатът е по-плавна работа, по-малко вибрации и значително удължен живот на скъпите механични компоненти.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/agri-secondary.jpg" alt="Верижни масла" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">ISO 150</div><div class="stat-block-label">Клас на вискозност</div></div>
+      <div class="stat-block"><div class="stat-block-num">Адхезив</div><div class="stat-block-label">Тип формула</div></div>
+      <div class="stat-block"><div class="stat-block-num">250ч</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">−15°C</div><div class="stat-block-label">Работна температура</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf верижни масла</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Висока адхезия</div>
+        <div class="benefit-card-text">Маслото остава върху веригата дори при високи скорости и в дъждовни условия.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Намалено триене</div>
+        <div class="benefit-card-text">По-плавна работа и по-малко загуба на мощност по веригата на задвижването.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита от корозия</div>
+        <div class="benefit-card-text">Бариера срещу влага и абразивни частици, предпазваща металните звена от ръжда.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-дълъг живот на компонентите</div>
+        <div class="benefit-card-text">По-рядка подмяна на вериги и водачи — по-ниски разходи за резервни части.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Комбайни с верижно задвижване и транспортьори; прибиращи машини с подвижни режещи механизми; всякакъв тип прикачен инвентар с открити вериги и водачи.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-agri-supplementary.html'] = (
+"Спомагателни продукти — Gulf Oil България",
+"Gulf спомагателни продукти — Грес, добавки и поддържащи продукти, които допълват основната гама и осигуряват пълна грижа за вашата техника през целия сезон.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/agri-secondary.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-agriculture.html">Земеделие</a> › Спомагателни продукти</div>
+    <div class="page-hero-eyebrow">Земеделие · Продукт</div>
+    <h1 class="page-hero-title">Спомагателни <span>продукти</span></h1>
+    <p class="page-hero-sub">Грес, добавки и поддържащи продукти, които допълват основната гама и осигуряват пълна грижа за вашата техника през целия сезон.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Завършеност на<br><span>цялостната грижа</span></h2>
+        <div class="prose">
+          <p>Освен основните масла и течности, поддръжката на земеделска техника изисква и набор от спомагателни продукти — смазки за лагери и шарнири, добавки за гориво и системи за охлаждане, и препарати за почистване на компоненти.</p>
+          <p>Гамата на Gulf допълва основните продукти, като осигурява последователна защита на всеки възел от машината — от двигателя до най-малкия шарнирен болт.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/agri-hero.jpg" alt="Спомагателни продукти" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">NLGI 2</div><div class="stat-block-label">Клас на смазките</div></div>
+      <div class="stat-block"><div class="stat-block-num">6000+</div><div class="stat-block-label">Продукта в портфолиото</div></div>
+      <div class="stat-block"><div class="stat-block-num">−20°C</div><div class="stat-block-label">Работна температура</div></div>
+      <div class="stat-block"><div class="stat-block-num">1</div><div class="stat-block-label">Доставчик за цялата гама</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf спомагателни продукти</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Универсална защита</div>
+        <div class="benefit-card-text">Смазки и добавки, разработени да работят съвместно с основните масла на Gulf, без компромис в качеството.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-дълъг живот на лагерите</div>
+        <div class="benefit-card-text">Качествени греси предпазват шарнири и лагери от износване в прашна и влажна среда.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-чисти системи</div>
+        <div class="benefit-card-text">Препарати за почистване поддържат компонентите в добро състояние между основните обслужвания.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Удобство от един доставчик</div>
+        <div class="benefit-card-text">Цялата необходима гама продукти от едно надеждно име — по-лесна поръчка и логистика.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Лагери, шарнири и кръстосани съединения на прикачен инвентар; горивни и охладителни системи на двигателя; обща поддръжка и почистване на машинния парк между сезони.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-auto-passenger.html'] = (
+"Масла за леки автомобили — Gulf Oil България",
+"Gulf масла за леки автомобили — Синтетични и полусинтетични формули Gulf Formula G — за плавна, ефективна и защитена работа на двигателя във всяко ежедневно пътуване.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/product-automotive.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-automotive.html">Автомобилни</a> › Масла за леки автомобили</div>
+    <div class="page-hero-eyebrow">Автомобилни · Продукт</div>
+    <h1 class="page-hero-title">Масла за леки <span>автомобили</span></h1>
+    <p class="page-hero-sub">Синтетични и полусинтетични формули Gulf Formula G — за плавна, ефективна и защитена работа на двигателя във всяко ежедневно пътуване.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Технология от<br><span>пистата на пътя</span></h2>
+        <div class="prose">
+          <p>Гамата Gulf Formula G пренася опита на марката от десетилетия в моторните спортове към ежедневните автомобили. Синтетичните основи и съвременните присадки осигуряват защита на двигателя дори при кратки градски пътувания и чести стартирания.</p>
+          <p>Формулите отговарят на изискванията на повечето съвременни бензинови и дизелови двигатели, включително такива с турбокомпресори и системи за контрол на емисиите.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/mclaren-artura-detail.jpg" alt="Масла за леки автомобили" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">5W-30</div><div class="stat-block-label">Основна спецификация</div></div>
+      <div class="stat-block"><div class="stat-block-num">ACEA C3</div><div class="stat-block-label">Европейски стандарт</div></div>
+      <div class="stat-block"><div class="stat-block-num">15000км</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">100%</div><div class="stat-block-label">Синтетична основа</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf масла за леки автомобили</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Плавно потегляне</div>
+        <div class="benefit-card-text">Бързо подаване на масло към критичните части на двигателя още при първото завъртане на ключа.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита на турбокомпресора</div>
+        <div class="benefit-card-text">Термична стабилност предпазва от образуване на отлагания при високи обороти и температури.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-ниска консумация на гориво</div>
+        <div class="benefit-card-text">Намалено вътрешно триене допринася за по-добра ефективност на двигателя.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Удължен живот на двигателя</div>
+        <div class="benefit-card-text">Постоянна защита при градско шофиране, дълги пътувания и всякакви условия на средата.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Леки автомобили с бензинови и дизелови двигатели; модели с турбокомпресор и системи Start-Stop; хибридни автомобили с термичен двигател.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-auto-motorcycle.html'] = (
+"Мотоциклетни масла — Gulf Oil България",
+"Gulf мотоциклетни масла — Изпитани в условията на пистата чрез партньорството с Trackhouse MotoGP — формули, създадени да издържат на най-високите обороти и температури.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/trackhouse-race-2.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-automotive.html">Автомобилни</a> › Мотоциклетни масла</div>
+    <div class="page-hero-eyebrow">Автомобилни · Продукт</div>
+    <h1 class="page-hero-title">Мотоциклетни <span>масла</span></h1>
+    <p class="page-hero-sub">Изпитани в условията на пистата чрез партньорството с Trackhouse MotoGP — формули, създадени да издържат на най-високите обороти и температури.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Наследство от<br><span>пистите на MotoGP</span></h2>
+        <div class="prose">
+          <p>Партньорството на Gulf с Trackhouse MotoGP Team не е само маркетингово присъствие — научените уроци от състезателните писти директно влияят върху формулирането на маслата за сериен мотоциклет.</p>
+          <p>Гамата покрива нуждите на четиритактови двигатели с общи и разделени системи за смазване на двигател и трансмисия, осигурявайки стабилна защита при високи обороти.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/trackhouse-race-4.jpg" alt="Мотоциклетни масла" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">10W-40</div><div class="stat-block-label">Основна спецификация</div></div>
+      <div class="stat-block"><div class="stat-block-num">JASO MA2</div><div class="stat-block-label">Стандарт за съединители</div></div>
+      <div class="stat-block"><div class="stat-block-num">6000км</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">MotoGP</div><div class="stat-block-label">Тествано на пистата</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf мотоциклетни масла</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Стабилност при високи обороти</div>
+        <div class="benefit-card-text">Поддържа защитна пленка дори при продължителна работа близо до червената линия на оборотомера.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Без приплъзване на съединителя</div>
+        <div class="benefit-card-text">Формула, съвместима с мокри съединители — точен и предвидим контрол на мощността.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Контрол на температурата</div>
+        <div class="benefit-card-text">Термична стабилност при условия на високо натоварване и температури от пистата.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита на трансмисията</div>
+        <div class="benefit-card-text">Плавна работа на скоростната кутия дори при агресивно превключване.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Спортни и туристически мотоциклети; модели с мокър съединител и обща система за смазване; мотоциклети, използвани както за ежедневие, така и за писта.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-auto-commercial.html'] = (
+"Търговски превозни средства — Gulf Oil България",
+"Gulf продукти за търговски превозни средства — Решения за камиони, бусове и търговски флоти — формулирани за дълги пробези, високо натоварване и максимална надеждност.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/trackhouse-race-3.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-automotive.html">Автомобилни</a> › Търговски превозни средства</div>
+    <div class="page-hero-eyebrow">Автомобилни · Продукт</div>
+    <h1 class="page-hero-title">Търговски превозни <span>средства</span></h1>
+    <p class="page-hero-sub">Решения за камиони, бусове и търговски флоти — формулирани за дълги пробези, високо натоварване и максимална надеждност.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Издръжливост за<br><span>дългия път</span></h2>
+        <div class="prose">
+          <p>Търговските превозни средства прекарват по-голямата част от времето си в експлоатация — дълги пробези, тежки товари и стриктни графици. Маслата на Gulf за този сегмент са създадени да поддържат двигателя защитен между сервизните прегледи.</p>
+          <p>Гамата отговаря на съвременните стандарти за дизелови двигатели с ниски емисии, като същевременно остава съвместима с по-стари модели в експлоатация.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/mclaren-artura-front.jpg" alt="Търговски превозни средства" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">10W-40</div><div class="stat-block-label">Основна спецификация</div></div>
+      <div class="stat-block"><div class="stat-block-num">API CK-4</div><div class="stat-block-label">Стандарт за дизелови двигатели</div></div>
+      <div class="stat-block"><div class="stat-block-num">50000км</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">Флоти</div><div class="stat-block-label">Решения за паркове</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf продукти за търговски превозни средства</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-малко престой</div>
+        <div class="benefit-card-text">По-дълги интервали между смените означават повече време на път и по-малко разходи за поддръжка.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита при тежък товар</div>
+        <div class="benefit-card-text">Стабилна защита на двигателя дори при максимално натоварване и продължителна работа.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Контрол на саждите</div>
+        <div class="benefit-card-text">Поддържа чистотата на филтрите за твърди частици и системите за намаляване на емисиите.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Решения за цели флоти</div>
+        <div class="benefit-card-text">Последователна защита и опростена логистика за компании с голям брой превозни средства.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Камиони и влекачи на далечни разстояния; градски и междуградски автобуси; бусове и лекотоварни търговски превозни средства.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-ind-industrial.html'] = (
+"Индустриални масла — Gulf Oil България",
+"Gulf индустриални масла — Решения за редуктори, компресори, турбини и общо производствено оборудване — формулирани за стабилна работа при продължително натоварване.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/sector-industrial.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-industrial-marine.html">Индустрия</a> › Индустриални масла</div>
+    <div class="page-hero-eyebrow">Индустрия · Продукт</div>
+    <h1 class="page-hero-title">Индустриални <span>масла</span></h1>
+    <p class="page-hero-sub">Решения за редуктори, компресори, турбини и общо производствено оборудване — формулирани за стабилна работа при продължително натоварване.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Надеждност за<br><span>непрекъснато производство</span></h2>
+        <div class="prose">
+          <p>Индустриалното оборудване често работи денонощно, без прекъсване. Маслата на Gulf за индустриални приложения са създадени да издържат на тези изисквания, поддържайки стабилна защита на компонентите между планираните обслужвания.</p>
+          <p>Гамата покрива широк спектър от приложения — от тежко натоварени редуктори до високоскоростни турбини и компресорни системи.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/marine-hero.jpg" alt="Индустриални масла" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">ISO 220</div><div class="stat-block-label">Клас на вискозност</div></div>
+      <div class="stat-block"><div class="stat-block-num">DIN 51517</div><div class="stat-block-label">Индустриален стандарт</div></div>
+      <div class="stat-block"><div class="stat-block-num">4000ч</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">24/7</div><div class="stat-block-label">Непрекъсната работа</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf индустриални масла</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Стабилност при натоварване</div>
+        <div class="benefit-card-text">Поддържа защитна маслена пленка дори при високи механични и термични натоварвания.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Удължен живот на оборудването</div>
+        <div class="benefit-card-text">Намалено триене и износване на зъбни колела, лагери и уплътнения.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Устойчивост на окисление</div>
+        <div class="benefit-card-text">По-дълъг експлоатационен живот на маслото между планираните смени.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-малко непланирани спирания</div>
+        <div class="benefit-card-text">Последователна защита намалява риска от аварийни престои на производствени линии.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Промишлени редуктори и трансмисии; компресорни и турбинни системи; общо производствено и поточно оборудване с непрекъснат режим на работа.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-ind-hydraulic.html'] = (
+"Хидравлични масла — Gulf Oil България",
+"Gulf хидравлични масла — Надеждна и прецизна работа на хидравличните системи в производствена среда — устойчивост на високо налягане и температурни колебания.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/marine-hero.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-industrial-marine.html">Индустрия</a> › Хидравлични масла</div>
+    <div class="page-hero-eyebrow">Индустрия · Продукт</div>
+    <h1 class="page-hero-title">Хидравлични <span>масла</span></h1>
+    <p class="page-hero-sub">Надеждна и прецизна работа на хидравличните системи в производствена среда — устойчивост на високо налягане и температурни колебания.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Прецизност в<br><span>сърцето на системата</span></h2>
+        <div class="prose">
+          <p>Хидравличните системи в производствена среда изискват течности, способни да поддържат стабилно налягане и точен отклик при променливи условия на работа и температура.</p>
+          <p>Маслата на Gulf за индустриална хидравлика осигуряват последователна защита на помпи, клапани и цилиндри — компоненти, чиято подмяна е скъпа и времеемка.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/sector-industrial.jpg" alt="Хидравлични масла" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">ISO 46</div><div class="stat-block-label">Клас на вискозност</div></div>
+      <div class="stat-block"><div class="stat-block-num">DIN 51524</div><div class="stat-block-label">Хидравличен стандарт</div></div>
+      <div class="stat-block"><div class="stat-block-num">4000ч</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">±1%</div><div class="stat-block-label">Точност на налягането</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf хидравлични масла</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Точен отклик на системата</div>
+        <div class="benefit-card-text">Постоянна вискозност при различни температури осигурява предвидимо поведение на хидравликата.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита на прецизни компоненти</div>
+        <div class="benefit-card-text">Намалява износването на помпи и клапани с тесни допуски.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Устойчивост на пенене</div>
+        <div class="benefit-card-text">Контролирано поведение при високо налягане запазва стабилността на системата.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-дълъг живот на маслото</div>
+        <div class="benefit-card-text">Висока устойчивост на окисление намалява честотата на подмяна и разходите за поддръжка.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Хидравлични преси и формовъчни машини; системи за управление на производствени линии; мобилна индустриална техника с хидравлично задвижване.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-ind-heat-transfer.html'] = (
+"Масла за топлопренос — Gulf Oil България",
+"Gulf масла за топлопренос — Термична стабилност при високи температури — за процеси, изискващи прецизен и постоянен контрол на топлинния пренос.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/sector-industrial.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-industrial-marine.html">Индустрия</a> › Масла за топлопренос</div>
+    <div class="page-hero-eyebrow">Индустрия · Продукт</div>
+    <h1 class="page-hero-title">Масла за <span>топлопренос</span></h1>
+    <p class="page-hero-sub">Термична стабилност при високи температури — за процеси, изискващи прецизен и постоянен контрол на топлинния пренос.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Стабилност при<br><span>екстремна топлина</span></h2>
+        <div class="prose">
+          <p>Системите за топлопренос работят при едни от най-високите температури в индустриална среда. Маслата на Gulf са формулирани да запазват стабилни характеристики продължително време, без да се разграждат термично.</p>
+          <p>Това осигурява последователен и предвидим пренос на топлина — критично условие за качеството и безопасността на индустриалните процеси.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/marine-secondary.jpg" alt="Масла за топлопренос" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">320°C</div><div class="stat-block-label">Макс. работна температура</div></div>
+      <div class="stat-block"><div class="stat-block-num">ISO 6743-12</div><div class="stat-block-label">Стандарт за топлопренос</div></div>
+      <div class="stat-block"><div class="stat-block-num">8000ч</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">Ниско</div><div class="stat-block-label">Образуване на утайки</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf масла за топлопренос</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Висока термична стабилност</div>
+        <div class="benefit-card-text">Запазва свойствата си продължително при работа на горната граница на температурния диапазон.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-малко утайки и нагар</div>
+        <div class="benefit-card-text">Чисти системи за топлопренос и по-малко необходимост от почистване на тръбопроводи.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Последователен пренос на топлина</div>
+        <div class="benefit-card-text">Стабилни характеристики осигуряват предвидимост на индустриалните процеси.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-дълъг живот на системата</div>
+        <div class="benefit-card-text">Намалена корозия и износване на компонентите на системата за топлопренос.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Системи за индустриално отопление и охлаждане; процеси в химическата и хранително-вкусовата промишленост; централизирани отоплителни инсталации в производствени съоръжения.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-ind-grease.html'] = (
+"Смазки — Gulf Oil България",
+"Gulf смазки — Дълготрайна защита на лагери, шарнири и движещи се части при тежки условия — намалено триене и удължен експлоатационен живот.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/marine-secondary.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-industrial-marine.html">Индустрия</a> › Смазки</div>
+    <div class="page-hero-eyebrow">Индустрия · Продукт</div>
+    <h1 class="page-hero-title"><span>Смазки</span></h1>
+    <p class="page-hero-sub">Дълготрайна защита на лагери, шарнири и движещи се части при тежки условия — намалено триене и удължен експлоатационен живот.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Защита там,<br><span>където маслото не достига</span></h2>
+        <div class="prose">
+          <p>Някои възли — лагери, шарнири, водачи — изискват не масло, а смазка: продукт, който остава на място и продължава да защитава дори при вибрации, високо налягане или излагане на влага и прах.</p>
+          <p>Гамата смазки на Gulf покрива широк диапазон от индустриални приложения, осигурявайки последователна защита независимо от условията на средата.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/sector-marine.jpg" alt="Смазки" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">NLGI 2</div><div class="stat-block-label">Клас на смазката</div></div>
+      <div class="stat-block"><div class="stat-block-num">Литиев комплекс</div><div class="stat-block-label">Тип сгъстител</div></div>
+      <div class="stat-block"><div class="stat-block-num">−20°C</div><div class="stat-block-label">Работна температура</div></div>
+      <div class="stat-block"><div class="stat-block-num">Високо</div><div class="stat-block-label">Натоварване на лагерите</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf смазки</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Останала на място защита</div>
+        <div class="benefit-card-text">Не се отмива лесно от вода или вибрации — продължава да предпазва дори в тежки условия.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Широк температурен диапазон</div>
+        <div class="benefit-card-text">Запазва консистенцията си както при ниски, така и при високи работни температури.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита от корозия</div>
+        <div class="benefit-card-text">Бариера срещу влага и агресивни вещества, предпазваща металните повърхности.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">По-дълги интервали на смазване</div>
+        <div class="benefit-card-text">По-малко планирана поддръжка и по-ниски разходи за труд и материали.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Индустриални лагери и електродвигатели; шарнирни съединения и водачи на конвейери; оборудване, изложено на влага, прах или високи натоварвания.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
+""")
+
+PAGES['product-marine-lubricants.html'] = (
+"Морски смазочни материали — Gulf Oil България",
+"Gulf морски смазочни материали — Защита на двигатели и системи в открито море — от малки риболовни лодки до големи търговски кораби, изградени да издържат на солена вода и продължителна работа.",
+"""
+<section class="page-hero" style="background-image:linear-gradient(120deg, rgba(17,29,71,0.93) 0%, rgba(27,45,107,0.82) 100%), url('images/marine-hero.jpg');">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › <a href="products-industrial-marine.html">Море</a> › Морски смазочни материали</div>
+    <div class="page-hero-eyebrow">Море · Продукт</div>
+    <h1 class="page-hero-title">Морски смазочни <span>материали</span></h1>
+    <p class="page-hero-sub">Защита на двигатели и системи в открито море — от малки риболовни лодки до големи търговски кораби, изградени да издържат на солена вода и продължителна работа.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="two-col reveal">
+      <div>
+        <div class="section-label">Какво представлява</div>
+        <h2 class="section-title">Издръжливост в<br><span>най-суровата среда</span></h2>
+        <div class="prose">
+          <p>Морската среда поставя едни от най-тежките изисквания пред смазочните материали — постоянен контакт със солена вода, продължителна непрекъсната работа и резки промени в натоварването на двигателите.</p>
+          <p>Продуктите на Gulf за морския сектор са формулирани да устояват именно на тези условия, осигурявайки последователна защита на двигатели, трансмисии и палубно оборудване.</p>
+        </div>
+      </div>
+      <div class="about-image" style="border-radius:16px;min-height:320px;">
+        <img src="images/sector-marine.jpg" alt="Морски смазочни материали" style="border-radius:16px;">
+      </div>
+    </div>
+
+    <div class="stats-strip reveal reveal-delay-1">
+      <div class="stat-block"><div class="stat-block-num">15W-40</div><div class="stat-block-label">Основна спецификация</div></div>
+      <div class="stat-block"><div class="stat-block-num">API CF</div><div class="stat-block-label">Морски стандарт</div></div>
+      <div class="stat-block"><div class="stat-block-num">500ч</div><div class="stat-block-label">Препоръчителен интервал</div></div>
+      <div class="stat-block"><div class="stat-block-num">Соленост</div><div class="stat-block-label">Устойчивост на корозия</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Предимства</div>
+        <h2 class="section-title">Защо да изберете<br><span>Gulf морски смазочни материали</span></h2>
+      </div>
+    </div>
+    <div class="benefit-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-card-title">Защита от корозия</div>
+        <div class="benefit-card-text">Бариера срещу солена вода и влага, предпазваща метални компоненти от ръжда и разяждане.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Стабилност при продължителна работа</div>
+        <div class="benefit-card-text">Поддържа защитни свойства дори при дни наред непрекъсната експлоатация на двигателя.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Контрол на отлаганията</div>
+        <div class="benefit-card-text">Поддържа чисти горивни системи и намалява риска от засядане на компоненти.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card-title">Надеждност в открито море</div>
+        <div class="benefit-card-text">Последователна защита, на която можете да разчитате далеч от брега и сервизната база.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Подходящо за</div>
+        <h2 class="section-title">Гамата<br><span>в действие</span></h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Риболовни и развлекателни плавателни съдове; търговски кораби и фериботи; палубно оборудване и спомагателни системи на борда.</p>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="contact.html" class="btn-primary">Свържете се с нас за повече информация →</a>
+    </div>
+  </div>
+</section>
 """)
 
 # ============================================================
@@ -1186,37 +2372,61 @@ PAGES['products-agriculture.html'] = (
         <img src="images/agri-secondary.jpg" alt="Земеделска работа" style="border-radius:16px;">
       </div>
     </div>
-    <div class="value-grid" style="margin-top:0;">
-      <div class="value-card anchor-offset reveal reveal-delay-1" id="engine">
-        <div class="value-card-icon">""" + icon("En") + """</div>
-        <div class="value-card-title">Моторни масла</div>
-        <div class="value-card-text">Защита на двигателя при продължителна работа с високо натоварване и в прашна среда.</div>
-      </div>
-      <div class="value-card anchor-offset reveal reveal-delay-2" id="transmission">
-        <div class="value-card-icon">""" + icon("Tr") + """</div>
-        <div class="value-card-title">Трансмисионни течности</div>
-        <div class="value-card-text">Плавна работа на трансмисията и удължен живот на компонентите при тежки условия.</div>
-      </div>
-      <div class="value-card anchor-offset reveal reveal-delay-3" id="hydraulic">
-        <div class="value-card-icon">""" + icon("Hy") + """</div>
-        <div class="value-card-title">Хидравлични масла</div>
-        <div class="value-card-text">Надеждна работа на хидравличните системи — от навесно оборудване до товарачи.</div>
-      </div>
-      <div class="value-card anchor-offset reveal reveal-delay-4" id="stou">
-        <div class="value-card-icon">""" + icon("St") + """</div>
-        <div class="value-card-title">STOU масла</div>
-        <div class="value-card-text">Универсални формули за двигател, трансмисия и хидравлика в едно решение — опростяващи поддръжката.</div>
-      </div>
-      <div class="value-card anchor-offset reveal reveal-delay-1" id="chain">
-        <div class="value-card-icon">""" + icon("Ch") + """</div>
-        <div class="value-card-title">Верижни масла</div>
-        <div class="value-card-text">Специализирана защита срещу износване на вериги и движещи се части на техниката.</div>
-      </div>
-      <div class="value-card reveal reveal-delay-2">
-        <div class="value-card-icon">""" + icon("Sp") + """</div>
-        <div class="value-card-title">Спомагателни продукти</div>
-        <div class="value-card-text">Грес, добавки и поддържащи продукти за пълна грижа за вашата техника.</div>
-      </div>
+    <div class="product-card-grid">
+      <a href="product-agri-engine-oil.html" class="product-card reveal reveal-delay-1">
+        <div class="product-card-img"><img src="images/agri-hero.jpg" alt="Моторни масла"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Земеделие</span>
+          <div class="product-card-title">Моторни масла</div>
+          <div class="product-card-desc">Защита на двигателя при продължителна работа с високо натоварване и в прашна среда.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
+      <a href="product-agri-transmission.html" class="product-card reveal reveal-delay-2">
+        <div class="product-card-img"><img src="images/agri-secondary.jpg" alt="Трансмисионни течности"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Земеделие</span>
+          <div class="product-card-title">Трансмисионни течности</div>
+          <div class="product-card-desc">Плавно превключване и удължен живот на трансмисията при тежки товари.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
+      <a href="product-agri-hydraulic.html" class="product-card reveal reveal-delay-3">
+        <div class="product-card-img"><img src="images/sector-industrial.jpg" alt="Хидравлични масла"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Земеделие</span>
+          <div class="product-card-title">Хидравлични масла</div>
+          <div class="product-card-desc">Стабилна работа на хидравличните системи — от навесно оборудване до товарачи.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
+      <a href="product-agri-stou.html" class="product-card reveal reveal-delay-4">
+        <div class="product-card-img"><img src="images/marine-hero.jpg" alt="STOU масла"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Земеделие</span>
+          <div class="product-card-title">STOU масла</div>
+          <div class="product-card-desc">Универсална формула за двигател, трансмисия и хидравлика в едно решение.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
+      <a href="product-agri-chain.html" class="product-card reveal reveal-delay-1">
+        <div class="product-card-img"><img src="images/agri-hero.jpg" alt="Верижни масла"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Земеделие</span>
+          <div class="product-card-title">Верижни масла</div>
+          <div class="product-card-desc">Специализирана защита срещу износване на вериги и движещи се части.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
+      <a href="product-agri-supplementary.html" class="product-card reveal reveal-delay-2">
+        <div class="product-card-img"><img src="images/agri-secondary.jpg" alt="Спомагателни продукти"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Земеделие</span>
+          <div class="product-card-title">Спомагателни продукти</div>
+          <div class="product-card-desc">Грес, добавки и поддържащи продукти за пълна грижа за вашата техника.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1262,27 +2472,43 @@ PAGES['products-industrial-marine.html'] = (
         <img src="images/sector-industrial.jpg" alt="Индустриални смазочни материали" style="border-radius:16px;">
       </div>
     </div>
-    <div class="value-grid" style="margin-top:0;">
-      <div class="value-card reveal reveal-delay-1">
-        <div class="value-card-icon">""" + icon("In") + """</div>
-        <div class="value-card-title">Индустриални масла</div>
-        <div class="value-card-text">Решения за редуктори, компресори и общо производствено оборудване.</div>
-      </div>
-      <div class="value-card reveal reveal-delay-2 anchor-offset" id="hydraulic">
-        <div class="value-card-icon">""" + icon("Hy") + """</div>
-        <div class="value-card-title">Хидравлични масла</div>
-        <div class="value-card-text">Надеждна работа на хидравличните системи в производствена среда.</div>
-      </div>
-      <div class="value-card reveal reveal-delay-3 anchor-offset" id="heat-transfer">
-        <div class="value-card-icon">""" + icon("Ht") + """</div>
-        <div class="value-card-title">Масла за топлопренос</div>
-        <div class="value-card-text">Стабилност при високи температури за процеси, изискващи прецизен контрол на топлината.</div>
-      </div>
-      <div class="value-card reveal reveal-delay-4">
-        <div class="value-card-icon">""" + icon("Gr") + """</div>
-        <div class="value-card-title">Смазки</div>
-        <div class="value-card-text">Дълготрайна защита на лагери и движещи се части при тежки условия.</div>
-      </div>
+    <div class="product-card-grid">
+      <a href="product-ind-industrial.html" class="product-card reveal reveal-delay-1">
+        <div class="product-card-img"><img src="images/sector-industrial.jpg" alt="Индустриални масла"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Индустрия</span>
+          <div class="product-card-title">Индустриални масла</div>
+          <div class="product-card-desc">Решения за редуктори, компресори, турбини и общо производствено оборудване.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
+      <a href="product-ind-hydraulic.html" class="product-card reveal reveal-delay-2 anchor-offset" id="hydraulic">
+        <div class="product-card-img"><img src="images/marine-hero.jpg" alt="Хидравлични масла"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Индустрия</span>
+          <div class="product-card-title">Хидравлични масла</div>
+          <div class="product-card-desc">Надеждна и прецизна работа на хидравличните системи в производствена среда.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
+      <a href="product-ind-heat-transfer.html" class="product-card reveal reveal-delay-3 anchor-offset" id="heat-transfer">
+        <div class="product-card-img"><img src="images/marine-secondary.jpg" alt="Масла за топлопренос"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Индустрия</span>
+          <div class="product-card-title">Масла за топлопренос</div>
+          <div class="product-card-desc">Термична стабилност при високи температури за прецизен контрол на топлината.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
+      <a href="product-ind-grease.html" class="product-card reveal reveal-delay-4">
+        <div class="product-card-img"><img src="images/sector-marine.jpg" alt="Смазки"></div>
+        <div class="product-card-body">
+          <span class="product-card-tag">Индустрия</span>
+          <div class="product-card-title">Смазки</div>
+          <div class="product-card-desc">Дълготрайна защита на лагери и движещи се части при тежки условия.</div>
+          <div class="product-card-link">Разгледай продукта →</div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1297,7 +2523,10 @@ PAGES['products-industrial-marine.html'] = (
           <p>Морската среда поставя едни от най-тежките изисквания пред смазочните материали — солена вода, продължителна работа и резки промени в натоварването. Продуктите на Gulf за морския сектор са разработени да устояват именно на тези условия.</p>
           <p>Гамата покрива нуждите от малки риболовни лодки до големи търговски кораби — осигурявайки защита на двигателите и системите в открито море.</p>
         </div>
-        <div style="margin-top:24px;"><a href="dealer-locator.html" class="btn-primary">Намери дилър →</a></div>
+        <div style="margin-top:24px;display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="product-marine-lubricants.html" class="btn-primary">Разгледай продукта →</a>
+          <a href="dealer-locator.html" class="btn-white" style="border:2px solid var(--navy);color:var(--navy);background:transparent;">Намери дилър →</a>
+        </div>
       </div>
       <div class="about-image" style="border-radius:16px;min-height:340px;">
         <img src="images/marine-hero.jpg" alt="Морски смазочни материали" style="border-radius:16px;">
