@@ -8,6 +8,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+  .leaflet-popup-content {
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+  }
+  .orange-pin {
+    width: 32px;
+    height: 40px;
+    background-color: var(--orange);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+</style>
 </head>
 <body>
 <!-- TOP BAR -->
@@ -65,7 +84,7 @@
           <div class="dropdown">
             <div class="dropdown-section">
               <a href="services.html">Горивна търговия</a>
-              <a href="dealer-locator.html">Намиране на дилър</a>
+              <a href="services.html#locator">Намиране на дилър</a>
             </div>
           </div>
         </li>
@@ -136,43 +155,192 @@
     <div class="breadcrumb"><a href="index.html">Начало</a> › Услуги › Горивна търговия</div>
     <div class="page-hero-eyebrow">Услуги</div>
     <h1 class="page-hero-title">Горивна<br><span>търговия</span></h1>
-    <p class="page-hero-sub">Освен с водещи смазочни материали, Gulf разполага с дългогодишен опит в горивната търговия и развитието на партньорства на дребно.</p>
+    <p class="page-hero-sub">През 1913 година Gulf открива своята първа бензиностанция под собствена марка. Повече от век по-късно мрежата наброява над 1400 обекта в 23 държави — и продължава да расте.</p>
   </div>
 </section>
 
+<!-- INTRO -->
 <section class="content-section">
   <div class="section-inner">
     <div class="two-col reveal">
       <div>
-        <div class="section-label">Какво предлагаме</div>
-        <h2 class="section-title">Партньорства<br><span>в горивния сектор</span></h2>
+        <div class="section-label">Горивна търговия с Gulf</div>
+        <h2 class="section-title">Всичко започва<br><span>през 1913 година</span></h2>
         <div class="prose">
-          <p>Gulf работи с дистрибутори, оператори на бензиностанции и индустриални клиенти, за да осигури надеждни доставки на горива и свързани услуги — подкрепени от десетилетия опит и глобална експертиза.</p>
-          <p>Независимо дали сте оператор на мрежа от бензиностанции или търсите доставчик за индустриални нужди — нашият екип може да изгради решение, съобразено с вашия бизнес.</p>
-        </div>
-        <div style="margin-top:28px;">
-          <a href="contact.html" class="btn-primary">Свържете се с нас →</a>
+          <p>През 1913 година Gulf прави историческа крачка с откриването на своята първа бензиностанция под собствена марка. Оттогава са изминали над 125 години непрекъснато развитие в горивата и смазочните материали.</p>
+          <p>Днес мрежата наброява над 1400 бензиностанции под марката Gulf в 23 държави. Зад всеки един от тези обекти стои постоянно методическо съдействие, съвместна работа по развитието на бизнеса, професионални услуги и достъп до международните партньорства на марката — сред които McLaren.</p>
         </div>
       </div>
       <div>
-        <div class="simple-grid" style="grid-template-columns:1fr;margin-top:0;">
-          <div class="simple-card">
-            <div class="simple-card-icon"><span class="icon-badge">01</span></div>
-            <div class="simple-card-title">Доставки на горива</div>
-            <div class="simple-card-text">Надеждни и навременни доставки за оператори на дребно и индустриални клиенти.</div>
-          </div>
-          <div class="simple-card">
-            <div class="simple-card-icon"><span class="icon-badge">02</span></div>
-            <div class="simple-card-title">Партньорства на дребно</div>
-            <div class="simple-card-text">Възможности за брандиране и развитие на обекти под името на Gulf.</div>
-          </div>
-          <div class="simple-card">
-            <div class="simple-card-icon"><span class="icon-badge">03</span></div>
-            <div class="simple-card-title">Бизнес подкрепа</div>
-            <div class="simple-card-text">Достъп до търговска експертиза, обучения и маркетингова подкрепа.</div>
-          </div>
+        <div class="partner-media" style="aspect-ratio:4/3;">
+          <img src="imagesComplete/Generic/Argentina_02.jpg" alt="Бензиностанция Gulf" style="object-fit:cover;object-position:center;transform:scale(1.08);">
+          <span class="partner-shard-sky"></span>
         </div>
       </div>
+    </div>
+
+    <div class="stats-strip reveal" style="margin-top:56px;">
+      <div class="stat-block">
+        <div class="stat-block-num">1913</div>
+        <div class="stat-block-label">Първата бензиностанция<br>под марката Gulf</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block-num">1400+</div>
+        <div class="stat-block-label">Бензиностанции<br>в мрежата на Gulf</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block-num">23</div>
+        <div class="stat-block-label">Държави с присъствие<br>в горивната търговия</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-block-num">125</div>
+        <div class="stat-block-label">Години иновации в горива<br>и смазочни материали</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BECOME A RETAILER -->
+<section class="content-section alt">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Станете търговец на горива с Gulf</div>
+        <h2 class="section-title">Растете заедно<br><span>с марката Gulf</span></h2>
+        <p class="section-body">Над век опит в смазочните материали и горивната търговия сваля бариерите пред влизането в бранша. Вместо да изграждате формулата за успех от нулата, вие я получавате наготово.</p>
+      </div>
+    </div>
+
+    <div class="prose reveal" style="max-width:900px;">
+      <p>Партньорите на Gulf се възползват от разпознаваемост на марката, изградена през поколения, и от продукти с постоянно високо търсене. Освен горивата и смазочните материали, всеки обект получава достъп до брандирани стоки и до цялостно изградено клиентско изживяване — както и до възможностите, които произтичат от международните партньорства на марката.</p>
+    </div>
+
+    <div class="benefit-grid reveal" style="margin-top:44px;">
+
+      <div class="benefit-panel is-orange">
+        <div class="benefit-title">Конкурентно предимство</div>
+        <p class="benefit-text">Влизате на пазара с име, което не се нуждае от представяне. Там, където новосъздадена марка трябва да инвестира години и значителни средства, за да изгради доверие, обектът под марката Gulf започва работа с него от първия ден.</p>
+        <p class="benefit-text">Това предимство се усеща най-силно в райони със силна конкуренция, където изборът на шофьора често се свежда до познатото име на табелата.</p>
+      </div>
+
+      <div class="benefit-panel is-navy">
+        <div class="benefit-title">Разпознаваемост на марката</div>
+        <p class="benefit-text">Оранжевият диск на Gulf е сред най-разпознаваемите знаци в петролната индустрия. Разпознаваемостта е подкрепена и от състезателното наследство на марката — партньорствата с McLaren, Williams Racing и Trackhouse MotoGP дават на всеки обект връзка със света на автомобилния спорт.</p>
+        <p class="benefit-text">Партньорите получават пълния набор от елементи на визуалната идентичност: брандиране на колонките и навесите, външна и вътрешна сигнализация, работно облекло и материали за обекта, изпълнени по единен международен стандарт.</p>
+      </div>
+
+      <div class="benefit-panel is-sky">
+        <div class="benefit-title">Собствена позиция на пазара</div>
+        <p class="benefit-text">Партньорството не е просто договор за доставка. Всеки лицензиант получава ясно определена територия и подкрепа при позиционирането спрямо конкуренцията в района — от избора на локация и оценката на потенциала ѝ до ценовата стратегия.</p>
+        <p class="benefit-text">Целта е обектът да заеме устойчиво място на местния пазар, а не да се конкурира с други обекти от същата мрежа.</p>
+      </div>
+
+      <div class="benefit-panel is-white">
+        <div class="benefit-title">Ускорен растеж</div>
+        <p class="benefit-text">Освен горивата, обектът предлага пълния продуктов портфейл на Gulf — моторни масла за леки автомобили и търговски превозни средства, смазочни материали за земеделска и индустриална техника, специализирани течности и брандирани стоки.</p>
+        <p class="benefit-text">Съчетанието между горива, смазочни материали и добре изградено клиентско изживяване увеличава средната стойност на покупката и превръща обекта в редовна дестинация, а не в случайно спиране по пътя.</p>
+      </div>
+
+    </div>
+  </section>
+
+<!-- ACTIVE SUPPORT -->
+<section class="content-section">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Дайте тласък на бизнеса си</div>
+        <h2 class="section-title">Предимството на<br><span>активната подкрепа</span></h2>
+        <p class="section-body">Разликата между доставчик и партньор е в това какво се случва след подписването на договора.</p>
+      </div>
+    </div>
+
+    <div class="support-panel reveal">
+      <div class="support-eyebrow">Бърз растеж</div>
+      <div class="support-quote">Вашият растеж е и <span>наш растеж</span> — работейки заедно, няма граница пред това, което можем да постигнем.</div>
+      <p class="support-sub">Затова използваме думата „партньор“, а не „клиент“. Активната подкрепа означава екип, който остава ангажиран с обекта и след откриването му — с обучения, маркетингови кампании, съдействие при доставките и постоянен обмен на информация за това какво работи на пазара.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEALER LOCATOR -->
+<section class="content-section" id="locator">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Намиране на дилър</div>
+        <h2 class="section-title">Намерете<br><span>дистрибутор в България</span></h2>
+        <p class="section-body">Изберете местоположение и вид услуга, за да намерите най-близкия оторизиран партньор на Gulf.</p>
+      </div>
+    </div>
+
+    <div class="locator-bar reveal">
+      <form class="locator-fields" onsubmit="event.preventDefault(); alert('Търсенето ще бъде активно скоро. В момента мрежата се разширява — свържете се с нас за съдействие.');">
+        <div class="form-field">
+          <label for="loc-place">Изберете местоположение</label>
+          <input type="text" id="loc-place" placeholder="Град, област или пощенски код">
+        </div>
+        <div class="form-field">
+          <label for="loc-sector">Сектор</label>
+          <select id="loc-sector">
+            <option value="">Всички</option>
+            <option value="fuels">Горива</option>
+            <option value="lubricants">Смазочни материали</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="loc-type">Вид услуга</label>
+          <select id="loc-type">
+            <option value="">Всички</option>
+            <option value="distributor">Дистрибутор</option>
+            <option value="entity">Търговски обект</option>
+            <option value="license">Лицензиран партньор</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="loc-radius">Радиус на търсене</label>
+          <select id="loc-radius">
+            <option value="5">5 км</option>
+            <option value="10">10 км</option>
+            <option value="25">25 км</option>
+            <option value="50" selected>50 км</option>
+            <option value="80">80 км</option>
+          </select>
+        </div>
+        <div class="locator-actions">
+          <button type="submit" class="btn-submit">Търси →</button>
+          <button type="reset" class="btn-reset">Изчисти</button>
+        </div>
+      </form>
+      <div class="locator-hint">Минимум 3 символа за търсене по местоположение.</div>
+    </div>
+
+    <div class="locator-layout reveal">
+      <div>
+        <div class="locator-results-head">
+          <div class="locator-results-count">Намерени: <span>1</span></div>
+        </div>
+
+        <div class="dealer-card">
+          <div class="dealer-card-badge">Официален дистрибутор</div>
+          <div class="dealer-card-name">Октантех</div>
+          <div class="dealer-card-row"><b>Адрес</b><span>Индустриален квартал, Стара Загора</span></div>
+          <div class="dealer-card-row"><b>Сектор</b><span>Смазочни материали</span></div>
+          <div class="dealer-card-row"><b>Работно време</b><span>Пон – Пет: 09:00 – 18:00</span></div>
+          <div class="dealer-card-tags">
+            <span class="dealer-tag">Леки автомобили</span>
+            <span class="dealer-tag">Товарни автомобили</span>
+            <span class="dealer-tag">Земеделска техника</span>
+            <span class="dealer-tag">Индустрия</span>
+          </div>
+        </div>
+
+        <div class="locator-empty">
+          Мрежата от партньори на Gulf в България се разширява. Ако във вашия район все още няма обект, <a href="contact.html" style="color:var(--orange);font-weight:600;">свържете се с нас</a> — ще ви насочим към най-близкия дистрибутор.
+        </div>
+      </div>
+
+      <div id="distributor-map" style="height: 560px; border-radius: 8px; overflow: hidden; border: 6px solid var(--orange);"></div>
     </div>
   </div>
 </section>
@@ -229,7 +397,7 @@
       <div>
         <div class="footer-col-title">Услуги</div>
         <ul class="footer-links">
-          <li><a href="dealer-locator.html">Намери дилър</a></li>
+          <li><a href="services.html#locator">Намери дилър</a></li>
           <li><a href="https://europe.gulfoilltd.com/lubricantadvisor" target="_blank">Съветник за масла</a></li>
           <li><a href="services.html">Горивна търговия</a></li>
           <li><a href="contact.html#distributor">Станете дистрибутор</a></li>
@@ -250,6 +418,28 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const map = L.map('distributor-map', { attributionControl: false }).setView([42.4167, 25.6453], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    const orangePinIcon = L.divIcon({
+      html: '<div class="orange-pin"></div>',
+      iconSize: [32, 40],
+      iconAnchor: [16, 40],
+      popupAnchor: [0, -40],
+      className: 'custom-div-icon'
+    });
+
+    const distributor = L.marker([42.4167, 25.6453], {icon: orangePinIcon})
+      .addTo(map)
+      .bindPopup('<img src="octane/Голямо_лого_Октантех-1-removebg-preview.png" style="width: 120px; margin-bottom: 8px;"><br><strong>Октантех</strong><br>Официален дистрибутор<br>Индустриален квартал<br>Стара Загора, България');
+  });
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

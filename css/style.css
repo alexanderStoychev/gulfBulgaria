@@ -2139,6 +2139,345 @@ footer {
   font-weight: 600;
   letter-spacing: 0.03em;
 }
+/* Gulf corner design 2, bottom-right of contact form section, flipped vertically so the navy sits at the bottom (revertable: delete this rule + remove .contact-corner-bottom div from markup) */
+.contact-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.contact-corner-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 340px;
+  height: 340px;
+  background-image: url('../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  transform: scaleY(-1);
+  pointer-events: none;
+  z-index: 0;
+}
+.contact-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .contact-corner-bottom { width: 200px; height: 200px; }
+}
+
+/* Gulf corner design 2, top-right of motorsport eras section (revertable: delete this rule + remove .eras-corner div from markup) */
+.eras-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.eras-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 595px;
+  height: 595px;
+  background-image: url('../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.eras-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .eras-corner { width: 350px; height: 350px; }
+}
+
+/* ===================== BENEFIT PANELS — color-blocked (services page) ===================== */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+.benefit-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 40px 38px;
+}
+.benefit-panel::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 0 62px 88px;
+  border-color: transparent transparent rgba(255,255,255,0.16) transparent;
+}
+.benefit-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.benefit-title::after {
+  content: '';
+  display: block;
+  margin-top: 14px;
+  width: 54px;
+  height: 4px;
+  border-radius: 2px;
+}
+.benefit-text {
+  font-size: 15px;
+  line-height: 1.75;
+  position: relative;
+  z-index: 1;
+}
+.benefit-text + .benefit-text { margin-top: 12px; }
+
+/* Orange panel */
+.benefit-panel.is-orange { background: var(--orange); }
+.benefit-panel.is-orange .benefit-title { color: var(--white); }
+.benefit-panel.is-orange .benefit-title::after { background: rgba(255,255,255,0.55); }
+.benefit-panel.is-orange .benefit-text { color: rgba(255,255,255,0.92); }
+
+/* Navy panel */
+.benefit-panel.is-navy { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); }
+.benefit-panel.is-navy .benefit-title { color: var(--white); }
+.benefit-panel.is-navy .benefit-title::after { background: var(--orange); }
+.benefit-panel.is-navy .benefit-text { color: rgba(255,255,255,0.78); }
+
+/* Sky panel */
+.benefit-panel.is-sky { background: var(--sky-light); }
+.benefit-panel.is-sky .benefit-title { color: var(--navy); }
+.benefit-panel.is-sky .benefit-title::after { background: var(--orange); }
+.benefit-panel.is-sky .benefit-text { color: var(--gray-text); }
+.benefit-panel.is-sky::after { border-bottom-color: rgba(27,45,107,0.10); }
+
+/* White panel */
+.benefit-panel.is-white {
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+}
+.benefit-panel.is-white .benefit-title { color: var(--navy); }
+.benefit-panel.is-white .benefit-title::after { background: var(--sky); }
+.benefit-panel.is-white .benefit-text { color: var(--gray-text); }
+.benefit-panel.is-white::after { border-bottom-color: rgba(27,45,107,0.07); }
+
+@media (max-width: 860px) {
+  .benefit-grid { grid-template-columns: 1fr; }
+  .benefit-panel { padding: 32px 26px; }
+}
+
+/* Support panel — navy band with pull-quote */
+.support-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  padding: 52px 56px;
+  margin-top: 8px;
+}
+.support-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 90px 0 0 130px;
+  border-color: var(--orange) transparent transparent transparent;
+  opacity: 0.92;
+}
+.support-panel::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 56px 0 0 78px;
+  border-color: var(--sky-light) transparent transparent transparent;
+}
+.support-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sky);
+  margin-bottom: 16px;
+}
+.support-quote {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.05;
+  max-width: 760px;
+}
+.support-quote span { color: var(--orange); }
+.support-sub {
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.72);
+  max-width: 620px;
+}
+@media (max-width: 700px) {
+  .support-panel { padding: 36px 28px; }
+}
+
+/* ===================== DEALER LOCATOR (services page) ===================== */
+.locator-bar {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 34px rgba(27,45,107,0.10);
+  border-top: 4px solid var(--navy);
+  margin-top: 32px;
+}
+.locator-fields {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+}
+.locator-fields .form-field { margin-bottom: 0; }
+.locator-hint {
+  font-size: 11.5px;
+  color: var(--gray-mid);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+.locator-actions { display: flex; gap: 10px; }
+.btn-reset {
+  padding: 13px 20px;
+  border-radius: 9px;
+  border: 2px solid var(--gray-light);
+  background: transparent;
+  color: var(--navy);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-reset:hover { border-color: var(--navy); background: var(--off-white); }
+
+.locator-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 28px;
+  margin-top: 28px;
+  align-items: start;
+}
+.locator-results-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--gray-light);
+  margin-bottom: 16px;
+}
+.locator-results-count {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.locator-results-count span { color: var(--orange); }
+.dealer-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-left: 4px solid var(--orange);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.dealer-card::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 34px 0 0 46px;
+  border-color: var(--sky-light) transparent transparent transparent;
+}
+.dealer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(27,45,107,0.12);
+}
+.dealer-card-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.dealer-card-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 10px;
+}
+.dealer-card-row {
+  display: flex;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--gray-text);
+  line-height: 1.55;
+  padding: 5px 0;
+}
+.dealer-card-row b {
+  color: var(--navy);
+  font-weight: 600;
+  min-width: 62px;
+  flex-shrink: 0;
+}
+.dealer-card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-light);
+}
+.dealer-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--off-white);
+  color: var(--navy);
+  border: 1px solid var(--gray-light);
+}
+.locator-empty {
+  padding: 20px 22px;
+  border: 2px dashed var(--gray-light);
+  border-radius: 12px;
+  font-size: 13.5px;
+  color: var(--gray-mid);
+  line-height: 1.6;
+}
+@media (max-width: 1000px) {
+  .locator-fields { grid-template-columns: 1fr 1fr; }
+  .locator-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .locator-fields { grid-template-columns: 1fr; }
+}
+
 /* Era media placeholder — used where the archive photo is not yet available */
 .partner-media.is-placeholder {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);

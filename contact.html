@@ -8,25 +8,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<style>
-  .leaflet-popup-content {
-    font-family: 'Barlow', sans-serif;
-    margin: 0;
-  }
-  .orange-pin {
-    width: 32px;
-    height: 40px;
-    background-color: var(--orange);
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
-</style>
 </head>
 <body>
 <!-- TOP BAR -->
@@ -84,7 +65,7 @@
           <div class="dropdown">
             <div class="dropdown-section">
               <a href="services.html">Горивна търговия</a>
-              <a href="dealer-locator.html">Намиране на дилър</a>
+              <a href="services.html#locator">Намиране на дилър</a>
             </div>
           </div>
         </li>
@@ -133,7 +114,7 @@
           <div class="dropdown">
             <div class="dropdown-section">
               <a href="contact.html">Свържете се с нас</a>
-              <a href="contact.html#map">Намерете дистрибутор</a>
+              <a href="services.html#locator">Намерете дистрибутор</a>
             </div>
           </div>
         </li>
@@ -159,7 +140,8 @@
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section contact-section-corner">
+  <div class="contact-corner-bottom"></div>
   <div class="section-inner">
     <div class="contact-grid">
       <div>
@@ -238,17 +220,6 @@
   </div>
 </section>
 
-<!-- DISTRIBUTORS MAP -->
-<section class="content-section" id="map">
-  <div class="section-inner">
-    <div class="reveal">
-      <div class="section-label">Дистрибутори</div>
-      <h2 class="section-title">Намерете<br><span>дистрибутор в България</span></h2>
-      <div id="distributor-map" style="height: 500px; margin-top: 32px; border-radius: 8px; overflow: hidden; border: 6px solid var(--orange);"></div>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
@@ -291,7 +262,7 @@
       <div>
         <div class="footer-col-title">Услуги</div>
         <ul class="footer-links">
-          <li><a href="dealer-locator.html">Намери дилър</a></li>
+          <li><a href="services.html#locator">Намери дилър</a></li>
           <li><a href="https://europe.gulfoilltd.com/lubricantadvisor" target="_blank">Съветник за масла</a></li>
           <li><a href="services.html">Горивна търговия</a></li>
           <li><a href="contact.html#distributor">Станете дистрибутор</a></li>
@@ -312,29 +283,6 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const map = L.map('distributor-map').setView([42.4167, 25.6453], 15);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: false,
-      maxZoom: 19
-    }).addTo(map);
-
-    const orangePinIcon = L.divIcon({
-      html: '<div class="orange-pin"></div>',
-      iconSize: [32, 40],
-      iconAnchor: [16, 40],
-      popupAnchor: [0, -40],
-      className: 'custom-div-icon'
-    });
-
-    const distributor = L.marker([42.4167, 25.6453], {icon: orangePinIcon})
-      .addTo(map)
-      .bindPopup('<img src="octane/Голямо_лого_Октантех-1-removebg-preview.png" style="width: 120px; margin-bottom: 8px;"><br><strong>Октантех</strong><br>Официален дистрибутор<br>Индустриален квартал<br>Стара Загора, България');
-  });
-</script>
 <script src="js/main.js"></script>
 </body>
 </html>
