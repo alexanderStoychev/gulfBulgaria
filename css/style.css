@@ -1790,14 +1790,6 @@ footer {
 .era-year + .partner-tag {
   display: none;
 }
-.partner-tag::before {
-  content: '';
-  display: block;
-  width: 0; height: 0;
-  border-style: solid;
-  border-width: 0 9px 9px 0;
-  border-color: transparent var(--orange) transparent transparent;
-}
 .partner-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: clamp(28px, 3.4vw, 40px);
@@ -2178,6 +2170,36 @@ footer {
 .contact-section-corner .section-inner { position: relative; z-index: 1; }
 @media (max-width: 900px) {
   .contact-corner-bottom { width: 200px; height: 200px; }
+}
+
+/* Gulf corner design 2, top-LEFT of the Hinduja Group section, flipped on the Y
+   axis so the navy band sits at the top-left instead of top-right (revertable:
+   delete this rule + remove .hinduja-corner div from markup). Text column is
+   nudged right so it clears the art instead of overlapping it. */
+.hinduja-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.hinduja-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 340px;
+  background-image: url('../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  pointer-events: none;
+  z-index: 0;
+}
+.hinduja-section-corner .section-inner { position: relative; z-index: 1; }
+.hinduja-row { position: relative; z-index: 1; }
+.hinduja-text { padding-left: 130px; padding-top: 90px; }
+@media (max-width: 900px) {
+  .hinduja-corner { width: 200px; height: 200px; }
+  .hinduja-text { padding-left: 0; padding-top: 60px; }
 }
 
 /* Gulf corner design 2, top-right of the "Предимството на активната подкрепа" section (revertable: delete this rule + remove .support-corner div from markup) */
@@ -2673,18 +2695,7 @@ footer {
   background: linear-gradient(135deg, #E4E4E1 0%, #D3D3CF 100%);
   border: 1px solid var(--gray-light);
 }
-.prod-row-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-/* Orange corner shard, mirrors the treatment on .partner-media */
-.prod-row-media::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 0; height: 0;
-  border-style: solid;
-  border-width: 74px 74px 0 0;
-  border-color: var(--orange) transparent transparent transparent;
-  z-index: 2;
-}
+.prod-row-media img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 .prod-ph {
   position: relative;
   z-index: 1;
@@ -2708,6 +2719,66 @@ footer {
 @media (max-width: 860px) {
   .prod-row { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
   .prod-row.is-flipped .prod-row-media { order: 0; }
+}
+
+/* Full-width media slot (About page) — empty frame kept at the size the real
+   photo/video will occupy, so the asset can be dropped straight in later. */
+.media-slot {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #E4E4E1 0%, #D3D3CF 100%);
+  border: 1px solid var(--gray-light);
+}
+/* Slot holds real transparent artwork (e.g. a partner logo) rather than a
+   placeholder — drop the grey gradient so the logo sits on plain white. */
+.media-slot.has-logo {
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.media-slot.has-logo > img { width: 100%; height: 100%; object-fit: contain; }
+.media-slot.is-wide   { aspect-ratio: 16 / 9; }
+.media-slot.is-video  { aspect-ratio: 16 / 9; }
+.media-slot.is-square { aspect-ratio: 4 / 3; }
+.media-slot.is-banner { aspect-ratio: 21 / 9; }
+/* Logo timeline artwork is ~3:1 — match it so nothing is cropped, and let the
+   art's own sky-blue field run edge to edge. */
+.media-slot.is-logotimeline {
+  aspect-ratio: 2400 / 808;
+  background: none;
+  border: none;
+}
+.media-slot.is-logotimeline > img { object-fit: contain; }
+.media-slot > img,
+.media-slot > video,
+.media-slot > iframe {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 0;
+}
+.media-slot-note {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(27,45,107,0.45);
+}
+.media-slot-note::before {
+  content: '';
+  width: 40px; height: 3px;
+  background: var(--orange);
+  opacity: 0.75;
 }
 
 /* Product range grid — the named Gulf products on a detail page */
