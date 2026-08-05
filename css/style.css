@@ -1905,7 +1905,9 @@ footer {
 }
 
 .contact-info-card {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  background: linear-gradient(135deg, rgba(17,29,71,0.9) 0%, rgba(27,45,107,0.85) 100%), url('../designElements/Gulf Virtual backgrounds_OPT 2.jpg');
+  background-size: cover;
+  background-position: center;
   border-radius: 16px;
   padding: 40px;
   position: relative;
@@ -1963,26 +1965,59 @@ footer {
   grid-template-columns: 240px 1fr;
   gap: 32px;
   align-items: center;
-  padding: 32px 0;
+  padding: 32px 0 32px 24px;
   border-top: 1px solid var(--gray-light);
+  border-left: 3px solid transparent;
   text-decoration: none;
   transition: all var(--transition);
 }
 .news-list:first-child .news-list-item:first-child { border-top: none; }
-.news-list-item:hover { transform: translateX(6px); }
+.news-list-item:hover {
+  transform: translateX(6px);
+  border-left-color: var(--orange);
+  background: linear-gradient(90deg, rgba(232,82,26,0.05) 0%, rgba(232,82,26,0) 60%);
+}
 .news-list-thumb {
   height: 150px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--gray-light) 0%, #d5d5d0 100%);
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 32px;
   color: var(--gray-mid);
   overflow: hidden;
+  position: relative;
 }
+.news-list-thumb::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background: var(--orange);
+}
+.news-list-item:nth-of-type(3n+2) .news-list-thumb::after { background: var(--navy); }
+.news-list-item:nth-of-type(3n) .news-list-thumb::after { background: var(--sky); }
 .news-list-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .news-list-item:hover .news-list-thumb img { transform: scale(1.05); }
+.news-list-item .news-card-date { color: var(--orange); font-weight: 700; }
+.news-list-item .news-card-tag { display: none; }
+.news-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.news-read-more .arrow { transition: transform var(--transition); }
+.news-read-more:hover { color: var(--orange); }
+.news-read-more:hover .arrow { transform: translateX(4px); }
 
 /* ===================== SIMPLE CARD GRID (services / locator) ===================== */
 .simple-grid {
@@ -2341,6 +2376,11 @@ footer {
   overflow: hidden;
   border-radius: 16px;
   padding: 40px 38px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.benefit-panel:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(17,29,71,0.18);
 }
 .benefit-panel::after {
   content: '';
@@ -2350,7 +2390,20 @@ footer {
   border-style: solid;
   border-width: 0 0 62px 88px;
   border-color: transparent transparent rgba(255,255,255,0.16) transparent;
+  transition: border-width 0.35s ease;
 }
+.benefit-panel:hover::after {
+  border-width: 0 0 90px 128px;
+}
+.benefit-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(255,255,255,0.6);
+  transition: height 0.35s ease;
+}
+.benefit-panel:hover::before { height: 6px; }
 .benefit-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 30px;
@@ -2358,6 +2411,8 @@ footer {
   text-transform: uppercase;
   line-height: 1.1;
   margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
 }
 .benefit-title::after {
   content: '';
@@ -2366,7 +2421,9 @@ footer {
   width: 54px;
   height: 4px;
   border-radius: 2px;
+  transition: width 0.4s ease;
 }
+.benefit-panel:hover .benefit-title::after { width: 84px; }
 .benefit-text {
   font-size: 15px;
   line-height: 1.75;
@@ -2393,6 +2450,7 @@ footer {
 .benefit-panel.is-sky .benefit-title::after { background: var(--orange); }
 .benefit-panel.is-sky .benefit-text { color: var(--gray-text); }
 .benefit-panel.is-sky::after { border-bottom-color: rgba(27,45,107,0.10); }
+.benefit-panel.is-sky::before { background: var(--orange); }
 
 /* White panel */
 .benefit-panel.is-white {
@@ -2403,6 +2461,7 @@ footer {
 .benefit-panel.is-white .benefit-title::after { background: var(--sky); }
 .benefit-panel.is-white .benefit-text { color: var(--gray-text); }
 .benefit-panel.is-white::after { border-bottom-color: rgba(27,45,107,0.07); }
+.benefit-panel.is-white::before { background: var(--navy); }
 
 @media (max-width: 860px) {
   .benefit-grid { grid-template-columns: 1fr; }
@@ -2779,6 +2838,75 @@ footer {
   width: 40px; height: 3px;
   background: var(--orange);
   opacity: 0.75;
+}
+
+/* Gulf corner design 2, top-right of the news list section */
+.news-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.news-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 680px;
+  height: 680px;
+  background-image: url('../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.news-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .news-corner { width: 400px; height: 400px; }
+}
+
+/* Gulf corner design 2, top-right of the "Винаги в развитие" section */
+.evolving-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.evolving-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 850px;
+  height: 850px;
+  background-image: url('../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.evolving-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .evolving-corner { width: 500px; height: 500px; }
+}
+
+/* Gulf corner design 2, top-right of the "Емблематичният стил на Gulf" section */
+.logo-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.logo-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 340px;
+  height: 340px;
+  background-image: url('../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.logo-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .logo-corner { width: 200px; height: 200px; }
 }
 
 /* Product range grid — the named Gulf products on a detail page */
