@@ -1,0 +1,112 @@
+/* ============================================================
+   Sections & content layout
+   Shared section wrapper, section headings and generic content blocks.
+   ============================================================ */
+
+/* ---------- Section commons ---------- */
+section {
+  padding: 60px 0;
+}
+
+.section-inner {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.section-title span { color: var(--orange); }
+
+.section-body {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--gray-mid);
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 56px;
+  gap: 32px;
+}
+
+.view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--orange) !important;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: gap var(--transition);
+  flex-shrink: 0;
+  position: relative;
+  right: 60px;
+}
+.view-all:hover { gap: 14px; }
+
+/* ---------- Generic content blocks ---------- */
+.content-section { background: var(--white); }
+.content-section.alt { background: var(--off-white); }
+
+.prose {
+  max-width: 760px;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--gray-text);
+  line-height: 1.75;
+}
+.prose p + p { margin-top: 18px; }
+.prose strong { color: var(--navy); font-weight: 600; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.anchor-offset { scroll-margin-top: 96px; }
+
+@media (max-width: 1100px) {
+  .two-col { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  section { padding: 64px 0; }
+}

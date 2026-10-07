@@ -1,0 +1,202 @@
+/* ============================================================
+   Product pages
+   Category stacks, product range grid and benefit cards.
+   ============================================================ */
+
+/* ---------- Product category rows (Europe-style stack) ---------- */
+.prod-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 60px 0;
+  border-top: 1px solid var(--gray-light);
+}
+/* every row keeps its divider so the corner art has a line to sit on */
+.prod-row:first-of-type { padding-top: 60px; }
+.prod-row.is-flipped .prod-row-media { order: -1; }
+.prod-row-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+.prod-row-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--navy);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.prod-row-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--gray-text);
+}
+.prod-row-text + .prod-row-text { margin-top: 14px; }
+.prod-row-link {
+  display: inline-block;
+  margin-top: 22px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 3px;
+  transition: var(--transition);
+}
+.prod-row-link:hover { color: var(--navy); border-bottom-color: var(--navy); }
+.prod-row-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+}
+/* Placeholder cards go grey so they read as a distinct layer over the corner art.
+   Only applies while there's no real photo in the frame. */
+.prod-row-media:has(.prod-ph) {
+  background: linear-gradient(135deg, #E4E4E1 0%, #D3D3CF 100%);
+  border: 1px solid var(--gray-light);
+}
+.prod-row-media img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.prod-ph {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%; height: 100%;
+  text-align: center;
+  padding: 24px;
+}
+.prod-ph-rule { width: 56px; height: 3px; background: var(--orange); opacity: 0.75; }
+.prod-ph-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(27,45,107,0.45);
+}
+@media (max-width: 860px) {
+  .prod-row { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+  .prod-row.is-flipped .prod-row-media { order: 0; }
+}
+
+/* ---------- Product range grid ---------- */
+/* Product range grid — the named Gulf products on a detail page */
+.range-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  margin-top: 34px;
+}
+.range-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: 14px;
+  padding: 26px 22px 24px;
+  transition: var(--transition);
+}
+.range-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(27,45,107,0.13);
+  border-color: transparent;
+}
+.range-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 46px 46px 0;
+  border-color: transparent var(--sky-light) transparent transparent;
+}
+.range-card-media {
+  height: 120px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.range-card-media img { max-height: 100%; max-width: 100%; object-fit: contain; }
+.range-card-ph {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.42);
+}
+.range-card-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  line-height: 1.15;
+  position: relative;
+  z-index: 1;
+}
+.range-card-note {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--gray-text);
+}
+
+/* ---------- Product card grid (category listings) ---------- */
+.product-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1100px) {
+  .product-card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .product-card-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Product benefit grid ---------- */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.benefit-card {
+  background: var(--white);
+  border-left: 4px solid var(--orange);
+  border-radius: 10px;
+  padding: 26px 28px;
+  box-shadow: 0 6px 24px rgba(27,45,107,0.07);
+}
+.benefit-card:nth-child(4n+2) { border-left-color: var(--navy); }
+.benefit-card:nth-child(4n+3) { border-left-color: var(--sky); }
+.benefit-card:nth-child(4n+4) { border-left-color: var(--orange); }
+.benefit-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.benefit-card-text { font-size: 14px; color: var(--navy-light); line-height: 1.65; }
+
+@media (max-width: 700px) {
+  .benefit-grid { grid-template-columns: 1fr; }
+}

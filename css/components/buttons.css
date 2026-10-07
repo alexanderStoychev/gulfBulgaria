@@ -1,0 +1,117 @@
+/* ============================================================
+   Buttons
+   All button styles. The :visited overrides keep button text colours from being
+   replaced by the generic `a:visited` rule in base/reset.css.
+   ============================================================ */
+
+/* ---------- Link-state colours ---------- */
+.btn-primary, .btn-primary:visited,
+.btn-ghost, .btn-ghost:visited,
+.partner-chip, .partner-chip:visited,
+.btn-submit, .btn-submit:visited { color: var(--white); }
+.btn-white, .btn-white:visited { color: var(--orange); }
+
+/* ---------- Primary & ghost ---------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange);
+  color: var(--white) !important;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: all var(--transition);
+  border: 2px solid var(--orange);
+}
+.btn-primary:hover {
+  background: #c94210;
+  border-color: #c94210;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,82,26,0.4);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.8);
+  transition: all var(--transition);
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.7);
+  transform: translateY(-2px);
+}
+
+/* ---------- White (on orange backgrounds) ---------- */
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  color: var(--orange);
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* ---------- Form submit ---------- */
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange);
+  color: var(--white);
+  padding: 15px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: 'Barlow', sans-serif;
+}
+.btn-submit:hover {
+  background: #c94210;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,82,26,0.35);
+}
+
+/* ---------- Reset (dealer locator) ---------- */
+.btn-reset {
+  padding: 13px 20px;
+  border-radius: 9px;
+  border: 2px solid var(--gray-light);
+  background: transparent;
+  color: var(--navy);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.btn-reset:hover { border-color: var(--navy); background: var(--off-white); }

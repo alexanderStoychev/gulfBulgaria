@@ -1,0 +1,119 @@
+/* ============================================================
+   About page
+   History timeline and full-width media slots.
+   ============================================================ */
+
+/* ---------- Timeline ---------- */
+.timeline {
+  position: relative;
+  margin-top: 24px;
+  padding-left: 40px;
+  border-left: 2px solid var(--sky-light);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -49px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--orange);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 2px var(--orange);
+}
+.timeline-year {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.timeline-year span { color: var(--orange); }
+.timeline-text {
+  font-size: 15px;
+  color: var(--gray-mid);
+  line-height: 1.65;
+  max-width: 580px;
+}
+
+/* ---------- History photo ---------- */
+.history-photo {
+  margin-top: 28px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(17,29,71,0.18);
+}
+.history-photo img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ---------- Media slot ---------- */
+/* Full-width media slot (About page) — empty frame kept at the size the real
+   photo/video will occupy, so the asset can be dropped straight in later. */
+.media-slot {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #E4E4E1 0%, #D3D3CF 100%);
+  border: 1px solid var(--gray-light);
+}
+/* Slot holds real transparent artwork (e.g. a partner logo) rather than a
+   placeholder — drop the grey gradient so the logo sits on plain white. */
+.media-slot.has-logo {
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.media-slot.has-logo > img { width: 100%; height: 100%; object-fit: contain; }
+.media-slot.is-wide   { aspect-ratio: 16 / 9; }
+.media-slot.is-video  { aspect-ratio: 16 / 9; }
+.media-slot.is-square { aspect-ratio: 4 / 3; }
+.media-slot.is-banner { aspect-ratio: 21 / 9; }
+/* Logo timeline artwork is ~3:1 — match it so nothing is cropped, and let the
+   art's own sky-blue field run edge to edge. */
+.media-slot.is-logotimeline {
+  aspect-ratio: 5388 / 1442;
+  background: none;
+  border: none;
+}
+.media-slot.is-logotimeline > img { object-fit: contain; }
+.media-slot > img,
+.media-slot > video,
+.media-slot > iframe {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 0;
+}
+.media-slot-note {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(27,45,107,0.45);
+}
+.media-slot-note::before {
+  content: '';
+  width: 40px; height: 3px;
+  background: var(--orange);
+  opacity: 0.75;
+}

@@ -1,0 +1,187 @@
+/* ============================================================
+   Gulf corner art
+   Brand corner graphics placed on individual inner-page sections. Each block is
+   self-contained, so removing one only needs the rule here + its div in the markup.
+   ============================================================ */
+
+/* Gulf corner design 2, bottom-right of contact form section, flipped vertically so the navy sits at the bottom (revertable: delete this rule + remove .contact-corner-bottom div from markup) */
+.contact-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.contact-corner-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 340px;
+  height: 340px;
+  background-image: url('../../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  transform: scaleY(-1);
+  pointer-events: none;
+  z-index: 0;
+}
+.contact-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .contact-corner-bottom { width: 200px; height: 200px; }
+}
+
+/* Gulf corner design 2, top-LEFT of the Hinduja Group section, flipped on the Y
+   axis so the navy band sits at the top-left instead of top-right (revertable:
+   delete this rule + remove .hinduja-corner div from markup). Text column is
+   nudged right so it clears the art instead of overlapping it. */
+.hinduja-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.hinduja-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 340px;
+  background-image: url('../../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  pointer-events: none;
+  z-index: 0;
+}
+.hinduja-section-corner .section-inner { position: relative; z-index: 1; }
+.hinduja-row { position: relative; z-index: 1; }
+.hinduja-text { padding-left: 130px; padding-top: 90px; }
+@media (max-width: 900px) {
+  .hinduja-corner { width: 200px; height: 200px; }
+  .hinduja-text { padding-left: 0; padding-top: 60px; }
+}
+
+/* Alternating corner art on each era block (1938 onward).
+   Left  = cornerDesign.png  mirrored on the Y axis (scaleX(-1)) so it reads as a top-LEFT corner.
+   Right = cornerDesign2.png in its native top-right orientation. */
+.partner-block, .prod-row, .prod-intro { position: relative; }
+/* Intro block on a product page: same corner treatment, with a divider beneath
+   it so it reads as the first item in the stack. */
+.prod-intro { padding-bottom: 60px; }
+.prod-intro > div:not(.era-corner-left):not(.era-corner-right) { position: relative; z-index: 1; }
+/* The intro sits below the section's own top padding, so pull its corner up to
+   the true top edge of the section (flush under the hero, like every other one). */
+.prod-intro > .era-corner-left,
+.prod-intro > .era-corner-right { top: -64px; }
+/* Corner art bleeds to the viewport edge and its top aligns with the grey
+   divider that opens each block (the previous block's border-bottom). */
+.era-corner-left,
+.era-corner-right {
+  position: absolute;
+  top: 0;
+  width: 595px;
+  height: 595px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.era-corner-left {
+  /* push out of .section-inner to the true left edge of the screen */
+  left: 50%;
+  margin-left: -50vw;
+  background-image: url('../../designElements/cornerDesign.png');
+  /* scaleX about the centre keeps the box anchored at the screen edge while
+     mirroring the art, so it reads as a top-LEFT corner */
+  background-position: top right;
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+.era-corner-right {
+  right: 50%;
+  margin-right: -50vw;
+  background-image: url('../../designElements/cornerDesign2.png');
+  background-position: top right;
+}
+/* Keep block content above the art */
+.partner-block > div:not(.era-corner-left):not(.era-corner-right),
+.prod-row > div:not(.era-corner-left):not(.era-corner-right) { position: relative; z-index: 1; }
+/* Product rows have no tall year heading, so the eyebrow sits right at the top —
+   use a smaller corner there so the art clears the text. */
+.prod-row > .era-corner-left,
+.prod-row > .era-corner-right,
+.prod-intro > .era-corner-left,
+.prod-intro > .era-corner-right { width: 400px; height: 400px; }
+@media (max-width: 900px) {
+  .era-corner-left, .era-corner-right { width: 320px; height: 320px; }
+  .prod-row > .era-corner-left,
+  .prod-row > .era-corner-right,
+  .prod-intro > .era-corner-left,
+  .prod-intro > .era-corner-right { width: 220px; height: 220px; }
+}
+
+/* Gulf corner design 2, top-right of motorsport eras section (revertable: delete this rule + remove .eras-corner div from markup) */
+.eras-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.eras-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 595px;
+  height: 595px;
+  background-image: url('../../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.eras-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .eras-corner { width: 350px; height: 350px; }
+}
+
+/* Gulf corner design 2, top-right of the "Винаги в развитие" section */
+.evolving-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.evolving-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 850px;
+  height: 850px;
+  background-image: url('../../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.evolving-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .evolving-corner { width: 500px; height: 500px; }
+}
+
+/* Gulf corner design 2, top-right of the "Емблематичният стил на Gulf" section */
+.logo-section-corner {
+  position: relative;
+  overflow: hidden;
+}
+.logo-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 340px;
+  height: 340px;
+  background-image: url('../../designElements/cornerDesign2.png');
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.logo-section-corner .section-inner { position: relative; z-index: 1; }
+@media (max-width: 900px) {
+  .logo-corner { width: 200px; height: 200px; }
+}

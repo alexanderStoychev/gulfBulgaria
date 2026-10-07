@@ -1,0 +1,36 @@
+/* ============================================================
+   Body copy
+   Paragraph-style text uses Arial. Headings, navigation, buttons,
+   labels and numbers keep Barlow so the design is unchanged.
+   ============================================================ */
+
+p,
+.prose li,
+.cv-points li,
+.section-body,
+.page-hero-sub,
+.hero-subtitle,
+.cta-sub,
+.footer-tagline,
+.product-card-desc,
+.sector-desc,
+.partner-text,
+.benefit-card-text,
+.simple-card-text,
+.team-card-text,
+.value-card-text,
+.timeline-text,
+.prod-row-text,
+.range-card-note,
+.advisor-text,
+.advisor-sub,
+.cv-value-text,
+.pd-hub-desc,
+.pd-footnote,
+.hs-cap,
+.pr-trio-card p,
+.pr-duo-item p,
+.pr-apps-lead,
+.pr-app span {
+  font-family: Arial, Helvetica, sans-serif;
+}

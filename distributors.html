@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Намерете дистрибутор — Gulf Oil България</title>
+<meta name="description" content="Намерете най-близкия оторизиран дистрибутор и партньор на Gulf Oil в България.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+  .leaflet-popup-content {
+    font-family: 'Barlow', sans-serif;
+    margin: 0;
+  }
+  .orange-pin {
+    width: 32px;
+    height: 40px;
+    background-color: var(--orange);
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+</style>
+</head>
+<body>
+<!-- NAV -->
+<div class="nav-wrapper">
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/lockup-gulf-octantech.png" alt="Gulf Oil и Октантех — Official Distributor" class="nav-lockup">
+      </a>
+
+      <ul class="nav-links">
+
+        <li>
+          <span>Продукти <span class="chevron">▾</span></span>
+          <div class="dropdown dropdown-wide">
+            <div class="dropdown-col">
+              <div class="dropdown-label">Автомобилни</div>
+              <a href="prod-car.html">Леки автомобили</a>
+              <a href="prod-commercial.html">Търговски превозни средства</a>
+              <a href="prod-motorcycle.html">Мотоциклети</a>
+              <a href="prod-engine-oils.html">Моторни масла</a>
+              <a href="prod-ev-fluids.html">E-Fluids</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-label">Индустрия и море</div>
+              <a href="prod-marine.html">Морски смазочни материали</a>
+              <a href="prod-agriculture.html">Земеделие</a>
+              <a href="prod-industrial.html">Индустрия</a>
+            </div>
+            <div class="dropdown-col">
+              <div class="dropdown-label">Още</div>
+              <a href="prod-merchandise.html">Стоки с марката Gulf</a>
+              <a href="products.html">Всички продукти</a>
+              <div class="dropdown-label" style="margin-top:12px;">Инструменти</div>
+              <a href="https://europe.gulfoilltd.com/lubricantadvisor" target="_blank">Съветник за смазочни материали</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <span>Партньорства <span class="chevron">▾</span></span>
+          <div class="dropdown">
+            <div class="dropdown-section">
+              <!-- HIDDEN (Williams): <a href="partnership-williams.html">Williams Racing</a> -->
+              <a href="partnership-trackhouse.html">Trackhouse MotoGP</a>
+              <a href="partnership-mclaren.html">McLaren Automotive</a>
+              <a href="partnership-everrati.html">Everrati</a>
+              <a href="partnership-rofgo.html">ROFGO</a>
+              <a href="partnership-tagheuer.html">TAG Heuer</a>
+              <a href="partnership-csk.html">Chennai Super Kings</a>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="motorsport.html">Мотоспорт</a></li>
+
+
+        <li>
+          <span>За нас <span class="chevron">▾</span></span>
+          <div class="dropdown">
+            <div class="dropdown-section">
+              <a href="about.html">Кои сме ние</a>
+              <a href="history.html">Нашата история</a>
+              <a href="culture.html">Култура и ценности</a>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <span>Контакт <span class="chevron">▾</span></span>
+          <div class="dropdown">
+            <div class="dropdown-section">
+              <a href="contact.html">Свържете се с нас</a>
+              <a href="distributors.html">Намерете дистрибутор</a>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-mobile-btn" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+</div>
+
+<section class="page-hero" style="background-image:linear-gradient(100deg, rgba(17,29,71,0.92) 0%, rgba(27,45,107,0.65) 55%, rgba(232,82,26,0.55) 100%), url('images/brand-static.png'); background-position: center; background-size: cover;">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Начало</a> › Контакт › Намерете дистрибутор</div>
+    <div class="page-hero-eyebrow">Контакт</div>
+    <h1 class="page-hero-title">Намерете<br><span>дистрибутор</span></h1>
+    <p class="page-hero-sub">Открийте най-близкия оторизиран партньор на Gulf в България — за смазочни материали, горива и техническа поддръжка.</p>
+  </div>
+</section>
+
+<!-- DEALER LOCATOR -->
+<section class="content-section" id="locator">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label">Намиране на дилър</div>
+        <h2 class="section-title">Намерете<br><span>дистрибутор в България</span></h2>
+        <p class="section-body">Изберете местоположение и вид услуга, за да намерите най-близкия оторизиран партньор на Gulf.</p>
+      </div>
+    </div>
+
+    <div class="locator-bar reveal">
+      <form class="locator-fields" onsubmit="event.preventDefault(); alert('Търсенето ще бъде активно скоро. В момента мрежата се разширява — свържете се с нас за съдействие.');">
+        <div class="form-field">
+          <label for="loc-place">Изберете местоположение</label>
+          <input type="text" id="loc-place" placeholder="Град, област или пощенски код">
+        </div>
+        <div class="form-field">
+          <label for="loc-sector">Сектор</label>
+          <select id="loc-sector">
+            <option value="">Всички</option>
+            <option value="fuels">Горива</option>
+            <option value="lubricants">Смазочни материали</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="loc-type">Вид услуга</label>
+          <select id="loc-type">
+            <option value="">Всички</option>
+            <option value="distributor">Дистрибутор</option>
+            <option value="entity">Търговски обект</option>
+            <option value="license">Лицензиран партньор</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="loc-radius">Радиус на търсене</label>
+          <select id="loc-radius">
+            <option value="5">5 км</option>
+            <option value="10">10 км</option>
+            <option value="25">25 км</option>
+            <option value="50" selected>50 км</option>
+            <option value="80">80 км</option>
+          </select>
+        </div>
+        <div class="locator-actions">
+          <button type="submit" class="btn-submit">Търси →</button>
+          <button type="reset" class="btn-reset">Изчисти</button>
+        </div>
+      </form>
+      <div class="locator-hint">Минимум 3 символа за търсене по местоположение.</div>
+    </div>
+
+    <div class="locator-layout reveal">
+      <div>
+        <div class="locator-results-head">
+          <div class="locator-results-count">Намерени: <span>1</span></div>
+        </div>
+
+        <div class="dealer-card">
+          <div class="dealer-card-badge">Официален дистрибутор</div>
+          <img class="dealer-card-logo" src="octane/Голямо_лого_Октантех-1-removebg-preview.png" alt="Октантех">
+          <div class="dealer-card-row"><b>Адрес</b><span>Индустриален квартал, Стара Загора</span></div>
+          <div class="dealer-card-row"><b>Сектор</b><span>Смазочни материали</span></div>
+          <div class="dealer-card-row"><b>Работно време</b><span>Пон – Пет: 09:00 – 18:00</span></div>
+          <div class="dealer-card-tags">
+            <span class="dealer-tag">Леки автомобили</span>
+            <span class="dealer-tag">Товарни автомобили</span>
+            <span class="dealer-tag">Земеделска техника</span>
+            <span class="dealer-tag">Индустрия</span>
+          </div>
+        </div>
+
+        <div class="locator-empty">
+          Мрежата от партньори на Gulf в България се разширява. Ако във вашия район все още няма обект, <a href="contact.html" style="color:var(--orange);font-weight:600;">свържете се с нас</a> — ще ви насочим към най-близкия дистрибутор.
+        </div>
+      </div>
+
+      <div id="distributor-map" style="height: 560px; border-radius: 8px; overflow: hidden; border: 6px solid var(--orange);"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEALER CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-title">Искате ли да станете<br>част от мрежата на Gulf?</div>
+      <div class="cta-sub">Научете повече за възможностите за партньорство и дистрибуция</div>
+    </div>
+    <a href="contact.html#distributor" class="btn-white">Станете партньор →</a>
+  </div>
+</div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="images/logo-gulf-disc.png" alt="Gulf Oil" class="footer-logo">
+        <p class="footer-tagline">Водещ световен доставчик на смазочни материали с над 120 години опит.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">in</a>
+          <a href="#" class="social-btn">YT</a>
+          <a href="#" class="social-btn">X</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Продукти</div>
+        <ul class="footer-links">
+          <li><a href="prod-car.html">Леки автомобили</a></li>
+          <li><a href="prod-commercial.html">Търговски превозни средства</a></li>
+          <li><a href="prod-motorcycle.html">Мотоциклети</a></li>
+          <li><a href="prod-engine-oils.html">Моторни масла</a></li>
+          <li><a href="prod-ev-fluids.html">E-Fluids</a></li>
+          <li><a href="prod-marine.html">Морски</a></li>
+          <li><a href="prod-agriculture.html">Земеделие</a></li>
+          <li><a href="prod-industrial.html">Индустрия</a></li>
+          <li><a href="prod-merchandise.html">Стоки с марката Gulf</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Компания</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Кои сме ние</a></li>
+          <li><a href="history.html">Нашата история</a></li>
+          <li><a href="culture.html">Култура и ценности</a></li>
+          <li><a href="motorsport.html">Мотоспорт</a></li>
+          <li><a href="partnerships.html">Партньорства</a></li>
+          <li><a href="about.html#commitment">Нашият ангажимент</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Контакт</div>
+        <ul class="footer-links">
+          <li><a href="distributors.html">Намери дилър</a></li>
+          <li><a href="https://europe.gulfoilltd.com/lubricantadvisor" target="_blank">Съветник за масла</a></li>
+          <li><a href="contact.html#distributor">Станете дистрибутор</a></li>
+          <li><a href="#">Вход за клиенти</a></li>
+          <li><a href="contact.html">Контакт</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Gulf Oil България. Всички права запазени.</div>
+      <div class="footer-legal">
+        <a href="#">Политика за поверителност</a>
+        <a href="#">Условия за ползване</a>
+        <a href="#">Управление на бисквитки</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const map = L.map('distributor-map', { attributionControl: false }).setView([42.4167, 25.6453], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19
+    }).addTo(map);
+
+    const orangePinIcon = L.divIcon({
+      html: '<div class="orange-pin"></div>',
+      iconSize: [32, 40],
+      iconAnchor: [16, 40],
+      popupAnchor: [0, -40],
+      className: 'custom-div-icon'
+    });
+
+    const distributor = L.marker([42.4167, 25.6453], {icon: orangePinIcon})
+      .addTo(map)
+      .bindPopup('<img src="octane/Голямо_лого_Октантех-1-removebg-preview.png" style="width: 120px; margin-bottom: 8px;"><br><strong>Октантех</strong><br>Официален дистрибутор<br>Индустриален квартал<br>Стара Загора, България');
+  });
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

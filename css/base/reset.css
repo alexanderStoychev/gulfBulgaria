@@ -1,0 +1,21 @@
+/* ============================================================
+   Reset & element defaults
+   Box-sizing reset and the base styles for html, body and links.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+a { color: inherit; text-decoration: none; }
+/* :visited must never win over a button's own colour — keep it at the same
+   specificity as `a` so class rules like .btn-ghost / .partner-chip apply. */
+a:visited { color: inherit; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: var(--gray-text);
+  background: var(--white);
+  overflow-x: hidden;
+}

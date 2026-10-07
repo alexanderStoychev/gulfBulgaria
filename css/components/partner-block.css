@@ -1,0 +1,209 @@
+/* ============================================================
+   Partner / era blocks
+   Alternating image + text blocks used on the Partnerships and Motorsport pages.
+   ============================================================ */
+
+.partner-block {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: center;
+  padding: 56px 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+.partner-block:last-child { border-bottom: none; }
+.partner-block:nth-child(even) .partner-media { order: 2; }
+.partner-media {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 56px;
+  color: rgba(255,255,255,0.18);
+  box-shadow: 0 16px 40px rgba(17,29,71,0.16);
+}
+.partner-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+/* Geometric color-shard accents, echoing Gulf's angular brand graphics */
+.partner-media::before,
+.partner-media::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+.partner-media::before {
+  top: 0; left: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 90px 130px 0 0;
+  border-color: var(--orange) transparent transparent transparent;
+  opacity: 0.92;
+}
+.partner-media::after {
+  top: 0; left: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 56px 78px 0 0;
+  border-color: var(--navy) transparent transparent transparent;
+}
+.partner-shard-sky {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  bottom: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 0 0 70px 100px;
+  border-color: transparent transparent var(--sky) transparent;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.partner-block:nth-child(even) .partner-media::before {
+  left: auto; right: 0;
+  border-width: 90px 0 0 130px;
+  border-color: var(--orange) transparent transparent transparent;
+}
+.partner-block:nth-child(even) .partner-media::after {
+  left: auto; right: 0;
+  border-width: 56px 0 0 78px;
+  border-color: var(--navy) transparent transparent transparent;
+}
+.partner-block:nth-child(even) .partner-shard-sky {
+  right: auto; left: 0;
+  border-width: 0 100px 70px 0;
+  border-color: transparent var(--sky) transparent transparent;
+}
+.era-year {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--navy);
+  letter-spacing: 0.01em;
+  margin-bottom: 6px;
+}
+.era-year::after {
+  content: '';
+  display: block;
+  margin-top: 10px;
+  width: 64px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+.era-year + .partner-tag {
+  display: none;
+}
+.partner-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 8px;
+  position: relative;
+  display: inline-block;
+}
+.partner-title::after {
+  content: '';
+  display: block;
+  margin-top: 12px;
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--orange) 60%, var(--sky) 60%, var(--sky) 100%);
+  border-radius: 2px;
+}
+.partner-title-wrap { margin-bottom: 18px; }
+.partner-text {
+  font-size: 15px;
+  color: var(--gray-mid);
+  line-height: 1.75;
+  max-width: 540px;
+}
+.partner-text + .partner-text { margin-top: 14px; }
+.partner-stats {
+  display: flex;
+  gap: 28px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+}
+.partner-stat {
+  border-left: 3px solid var(--orange);
+  padding-left: 14px;
+}
+.partner-block:nth-child(3n+2) .partner-stat { border-left-color: var(--navy); }
+.partner-block:nth-child(3n+3) .partner-stat { border-left-color: var(--sky); }
+.partner-stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+}
+.partner-stat-label {
+  font-size: 11.5px;
+  color: var(--gray-mid);
+  margin-top: 4px;
+  letter-spacing: 0.03em;
+}
+
+.partner-caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 14px 18px;
+  background: linear-gradient(0deg, rgba(17,29,71,0.82) 0%, rgba(17,29,71,0) 100%);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 1100px) {
+  .partner-block, .partner-block:nth-child(even) .partner-media { grid-template-columns: 1fr; order: 0; }
+  .partner-block { gap: 28px; }
+}
+
+/* ---------- Text-only block (era with no archive photo) ---------- */
+/* The copy keeps its usual column on the side opposite the corner art,
+   so the text never sits on top of it. */
+.partner-block.is-text-only > .era-corner-left ~ div { grid-column: 2; }
+/* Once the layout stacks there is no photo to cover a left corner, so the
+   art moves to the right edge (same as .era-corner-right) to clear the text. */
+@media (max-width: 1100px) {
+  .partner-block.is-text-only > .era-corner-left ~ div { grid-column: auto; }
+  .partner-block.is-text-only > .era-corner-left {
+    left: auto;
+    margin-left: 0;
+    right: 50%;
+    margin-right: -50vw;
+    background-image: url('../../designElements/cornerDesign2.png');
+    transform: none;
+  }
+}
+
+.partner-highlight {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 9px;
+  background: var(--off-white);
+  border-left: 3px solid var(--orange);
+  font-size: 13.5px;
+  color: var(--navy);
+  font-weight: 600;
+}

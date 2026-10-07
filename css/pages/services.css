@@ -1,0 +1,155 @@
+/* ============================================================
+   Services page
+   Dealer locator page.
+   ============================================================ */
+
+/* ---------- Dealer locator ---------- */
+.locator-bar {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 34px rgba(27,45,107,0.10);
+  border-top: 4px solid var(--navy);
+  margin-top: 32px;
+}
+.locator-fields {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+}
+.locator-fields .form-field { margin-bottom: 0; }
+.locator-hint {
+  font-size: 11.5px;
+  color: var(--gray-mid);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+.locator-actions { display: flex; gap: 10px; }
+
+.locator-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 28px;
+  margin-top: 28px;
+  align-items: start;
+}
+.locator-results-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--gray-light);
+  margin-bottom: 16px;
+}
+.locator-results-count {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.locator-results-count span { color: var(--orange); }
+.dealer-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-left: 4px solid var(--orange);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.dealer-card::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 34px 0 0 46px;
+  border-color: var(--sky-light) transparent transparent transparent;
+}
+.dealer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(27,45,107,0.12);
+}
+.dealer-card-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.dealer-card-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--navy);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 10px;
+}
+/* Distributor logo shown in place of the name */
+.dealer-card-logo {
+  display: block;
+  width: auto;
+  height: 46px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 14px;
+}
+.dealer-card-row {
+  display: flex;
+  gap: 10px;
+  font-size: 13.5px;
+  color: var(--gray-text);
+  line-height: 1.55;
+  padding: 5px 0;
+}
+.dealer-card-row b {
+  color: var(--navy);
+  font-weight: 600;
+  min-width: 62px;
+  flex-shrink: 0;
+}
+.dealer-card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-light);
+}
+.dealer-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--off-white);
+  color: var(--navy);
+  border: 1px solid var(--gray-light);
+}
+.locator-empty {
+  padding: 20px 22px;
+  border: 2px dashed var(--gray-light);
+  border-radius: 12px;
+  font-size: 13.5px;
+  color: var(--gray-mid);
+  line-height: 1.6;
+}
+@media (max-width: 1000px) {
+  .locator-fields { grid-template-columns: 1fr 1fr; }
+  .locator-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .locator-fields { grid-template-columns: 1fr; }
+}

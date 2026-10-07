@@ -1,0 +1,187 @@
+/* ============================================================
+   Product section pages
+   Category pages built from the Product Overview material. They reuse the
+   partner-detail layout blocks (banner, split, band) plus the pieces below.
+   ============================================================ */
+
+/* ---------- Thin banner (very wide artwork) ---------- */
+.pd-banner.is-thin { height: auto; aspect-ratio: 2500 / 372; }
+.pd-banner.is-thin img { object-fit: cover; }
+
+/* ---------- Intro in two text columns ---------- */
+.pr-intro .pr-intro-head { max-width: 980px; margin-bottom: 36px; }
+.pr-intro .pd-lead { max-width: 760px; }
+.pr-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 64px;
+  align-items: start;
+}
+.pr-cols .prose { max-width: none; }
+.pr-cols .cv-points { max-width: none; margin: 18px 0; }
+.pr-cols .cv-points li + li { margin-top: 6px; }
+.pr-note { font-style: italic; color: var(--navy); }
+
+/* ---------- Anchor pills ---------- */
+.pr-pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 44px; padding: 0; list-style: none; }
+.pr-pills a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px 9px 18px;
+  border: 1.5px solid var(--navy);
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.pr-pills a::after {
+  content: "›";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 15px;
+  line-height: 1;
+  padding-bottom: 2px;
+}
+.pr-pills a:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
+.pr-pills a:visited { color: var(--navy); }
+.pr-pills a:hover:visited { color: var(--white); }
+
+/* ---------- Navy split variant ---------- */
+.pd-split.is-navy .pd-split-text { background: var(--navy); }
+.pd-split.is-navy .section-title { color: var(--white); }
+.pd-split.is-navy .prose,
+.pd-split.is-navy .prose p { color: rgba(255,255,255,0.86); }
+.pd-split.is-navy .cv-points li { color: rgba(255,255,255,0.86); }
+.pd-split.is-navy .pd-link { color: var(--sky) !important; }
+.pd-split-text .cv-points { margin-top: 18px; }
+.pd-split-text .pr-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 20px 0 8px;
+}
+.pd-split-text .prose + .prose,
+.pd-split-text .prose + .cv-points,
+.pd-split-text .cv-points + .prose { margin-top: 18px; }
+.pr-btn { margin-top: 26px; align-self: flex-start; }
+.pr-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.pr-tags span {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1.5px solid var(--navy);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.pd-split.is-navy .pr-tags span { border-color: rgba(255,255,255,0.5); color: var(--white); }
+
+/* ---------- Caption size variant ---------- */
+.pd-band-caption.is-sm { font-size: clamp(24px, 3vw, 44px); max-width: 980px; }
+
+/* ---------- Two-up navy section (greases / car care) ---------- */
+.pr-duo { background: var(--navy); padding: 80px 0; }
+.pr-duo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.pr-duo-item { scroll-margin-top: 96px; }
+.pr-duo-img { aspect-ratio: 4 / 3; overflow: hidden; border-radius: 14px; margin-bottom: 26px; box-shadow: 0 16px 40px rgba(0,0,0,0.3); }
+.pr-duo-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pr-duo-item .pr-duo-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(30px, 3.4vw, 40px);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.pr-duo-item .pr-duo-title::after { content: ""; display: block; width: 64px; height: 4px; margin-top: 12px; border-radius: 2px; background: var(--orange); }
+.pr-duo-item p { font-size: 15.5px; line-height: 1.75; color: rgba(255,255,255,0.84); }
+.pr-duo-item p + p { margin-top: 14px; }
+
+/* ---------- Product-name trio (engine oils) ---------- */
+.pr-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.pr-trio-card {
+  text-align: center;
+  padding: 38px 30px 36px;
+  background: var(--white);
+  border-radius: 16px;
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 12px 34px rgba(17,29,71,0.1);
+}
+.pr-trio-card:nth-child(2) { border-top-color: var(--navy); }
+.pr-trio-card:nth-child(3) { border-top-color: var(--sky); }
+.pr-trio-card img { width: 72px; height: 72px; object-fit: contain; margin-bottom: 14px; }
+.pr-trio-title { font-family: 'Barlow Condensed', sans-serif; font-size: 34px; font-weight: 800; text-transform: uppercase; line-height: 1.05; color: var(--navy); }
+.pr-trio-sub { margin: 8px 0 16px; font-size: 14px; font-weight: 700; color: var(--orange); }
+.pr-trio-card p { font-size: 14.5px; line-height: 1.7; color: var(--gray-text); text-align: left; }
+
+/* ---------- Application icons (industrial) ---------- */
+.pr-apps { background: var(--navy); padding: 80px 0 90px; }
+.pr-apps .section-title { color: var(--white); }
+.pr-apps .section-label { color: var(--sky); }
+.pr-apps .section-label::before { background: var(--sky); }
+.pr-apps-lead { max-width: 720px; margin: 0 auto 52px; font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.8); text-align: center; }
+.pr-apps-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 36px 20px; }
+.pr-app { text-align: center; }
+.pr-app img { width: 96px; height: 96px; display: block; margin: 0 auto 14px; transition: transform var(--transition); }
+.pr-app:hover img { transform: translateY(-4px) scale(1.04); }
+.pr-app span { display: block; font-size: 14px; line-height: 1.4; color: var(--white); }
+
+/* ---------- Product cards (merch, hub, agriculture) ---------- */
+.pd-hub-card.is-static:hover { transform: none; box-shadow: 0 8px 28px rgba(17,29,71,0.1); }
+.pd-hub-card.is-static:hover .pd-hub-img img { transform: none; }
+.pd-hub.is-two { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-left: auto; margin-right: auto; }
+.pd-hub.is-top { align-items: start; }
+.pd-hub-card.is-square .pd-hub-img { aspect-ratio: 1 / 1; background: var(--off-white); }
+.pd-hub-card.is-square .pd-hub-body { align-items: center; text-align: center; }
+.pd-hub-card .pd-hub-desc + .pd-hub-desc { margin-top: 6px; }
+.pr-sechead { max-width: 820px; margin: 0 auto 8px; text-align: center; }
+.pr-sechead .section-label { justify-content: center; }
+.pr-sechead .prose { max-width: none; }
+.pr-sechead .prose + .prose { margin-top: 16px; }
+.pr-cards { margin-top: 48px; }
+
+/* ---------- Range link strip ---------- */
+.pr-range { background: var(--off-white); padding: 54px 0; text-align: center; }
+.pr-range .pr-range-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(26px, 3vw, 36px); font-weight: 800; text-transform: uppercase; color: var(--navy); margin-bottom: 18px; }
+
+@media (max-width: 1100px) {
+  .pr-cols { grid-template-columns: 1fr; gap: 20px; }
+  .pr-duo-grid { grid-template-columns: 1fr; gap: 56px; }
+  .pr-trio { grid-template-columns: 1fr; }
+  .pr-apps-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .pr-apps-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 12px; }
+  .pd-hub.is-two { grid-template-columns: 1fr; }
+  .pr-duo { padding: 56px 0; }
+}
+
+/* Long Bulgarian words must never stretch the layout on phones */
+.pr-intro .section-title,
+.pr-sechead .section-title,
+.pr-duo-title,
+.pr-trio-title,
+.pd-hub-title { overflow-wrap: anywhere; }
+.pr-cols > *, .pr-intro-head, .pd-split-text { min-width: 0; }
+@media (max-width: 480px) {
+  .pr-intro .section-title,
+  .pr-sechead .section-title,
+  .pd-split-text .section-title { font-size: clamp(24px, 7.4vw, 34px); }
+  .pr-apps .section-title { font-size: clamp(28px, 8vw, 36px); }
+}
+.breadcrumb { flex-wrap: wrap; row-gap: 4px; }
+.pd-textrow .section-title { overflow-wrap: anywhere; }
+.pd-textrow > * { min-width: 0; }
+@media (max-width: 480px) {
+  .pd-textrow .section-title { font-size: clamp(24px, 7.4vw, 34px); }
+}
