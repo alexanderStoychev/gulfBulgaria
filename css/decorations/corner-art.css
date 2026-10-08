@@ -28,36 +28,6 @@
   .contact-corner-bottom { width: 200px; height: 200px; }
 }
 
-/* Gulf corner design 2, top-LEFT of the Hinduja Group section, flipped on the Y
-   axis so the navy band sits at the top-left instead of top-right (revertable:
-   delete this rule + remove .hinduja-corner div from markup). Text column is
-   nudged right so it clears the art instead of overlapping it. */
-.hinduja-section-corner {
-  position: relative;
-  overflow: hidden;
-}
-.hinduja-corner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 340px;
-  height: 340px;
-  background-image: url('../../designElements/cornerDesign2.png');
-  background-size: contain;
-  background-position: top right;
-  background-repeat: no-repeat;
-  transform: scaleX(-1);
-  pointer-events: none;
-  z-index: 0;
-}
-.hinduja-section-corner .section-inner { position: relative; z-index: 1; }
-.hinduja-row { position: relative; z-index: 1; }
-.hinduja-text { padding-left: 130px; padding-top: 90px; }
-@media (max-width: 900px) {
-  .hinduja-corner { width: 200px; height: 200px; }
-  .hinduja-text { padding-left: 0; padding-top: 60px; }
-}
-
 /* Alternating corner art on each era block (1938 onward).
    Left  = cornerDesign.png  mirrored on the Y axis (scaleX(-1)) so it reads as a top-LEFT corner.
    Right = cornerDesign2.png in its native top-right orientation. */
